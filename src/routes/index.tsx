@@ -181,16 +181,18 @@ function Hero() {
         </div>
         <div className="md:col-span-5 lg:col-span-5">
           <figure className="relative">
-            <div className="absolute -top-3 -left-3 right-6 bottom-6 ring-1 ring-brass/30 pointer-events-none" />
+            <span
+              aria-hidden
+              className="absolute -left-6 top-8 font-serif italic text-brass/40 text-sm tracking-[0.18em] rotate-[-90deg] origin-top-left hidden md:block"
+            >
+              Dr. Giuliano Aita · CRM-SP
+            </span>
             <img
               src={heroPortrait}
               alt="Dr. Giuliano Aita — urologista"
-              className="relative w-full aspect-[4/5] object-cover object-top"
+              className="relative w-full aspect-[4/5] object-cover [object-position:50%_18%] img-fade-radial"
               loading="eager"
             />
-            <figcaption className="absolute bottom-4 right-4 bg-bone/90 backdrop-blur-sm px-4 py-3 text-[10px] uppercase tracking-[0.22em] text-ink/70">
-              Dr. Giuliano Aita · CRM-SP
-            </figcaption>
           </figure>
         </div>
       </div>
@@ -244,18 +246,18 @@ function TreatmentsFeatured() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-bone/10 border border-bone/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
           {featuredTreatments.map((t) => (
-            <article key={t.n} className="bg-ink group flex flex-col">
-              <div className="overflow-hidden aspect-[4/3] border-b border-bone/10">
+            <article key={t.n} className="group flex flex-col">
+              <div className="overflow-hidden aspect-[4/3] mb-8">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms] ease-out"
+                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms] ease-out img-fade-b"
                   loading="lazy"
                 />
               </div>
-              <div className="p-10 flex-1 flex flex-col">
+              <div className="flex-1 flex flex-col">
                 <div className="flex items-baseline justify-between mb-8">
                   <span className="font-serif italic text-2xl text-brass-soft">{t.n}.</span>
                   <span className="text-[10px] uppercase tracking-[0.28em] text-bone/40">
@@ -340,7 +342,7 @@ function Bio() {
             <img
               src={portraitBio}
               alt="Dr. Giuliano Aita"
-              className="w-full aspect-[4/5] object-cover object-top mb-8"
+              className="w-full aspect-[4/5] object-cover [object-position:50%_15%] mb-8 img-fade-b"
               loading="lazy"
             />
             <dl className="space-y-5 border-t border-border pt-8 text-sm">
@@ -435,11 +437,11 @@ function NewsSection() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {news.map((n) => (
             <article key={n.title} className="group flex flex-col">
-              <div className="aspect-[4/3] overflow-hidden mb-6 bg-bone-soft">
+              <div className="aspect-[4/3] overflow-hidden mb-6">
                 <img
                   src={n.image}
                   alt={n.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[1200ms] ease-out img-fade-b"
                   loading="lazy"
                 />
               </div>
@@ -489,13 +491,13 @@ function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-6 gap-3 md:gap-4">
-          <img src={galleryImages[0]} alt="Clínica" className="col-span-6 md:col-span-4 aspect-[16/10] object-cover" loading="lazy" />
-          <img src={galleryImages[1]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-square object-cover" loading="lazy" />
-          <img src={galleryImages[2]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-square object-cover" loading="lazy" />
-          <img src={galleryImages[3]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-[4/5] object-cover" loading="lazy" />
-          <img src={galleryImages[4]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-[4/5] object-cover" loading="lazy" />
-          <img src={galleryImages[5]} alt="Clínica" className="col-span-6 md:col-span-2 aspect-[4/5] object-cover" loading="lazy" />
+        <div className="grid grid-cols-6 gap-6 md:gap-10">
+          <img src={galleryImages[0]} alt="Clínica" className="col-span-6 md:col-span-4 aspect-[16/10] object-cover img-fade-soft" loading="lazy" />
+          <img src={galleryImages[1]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-square object-cover img-fade-soft" loading="lazy" />
+          <img src={galleryImages[2]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-square object-cover img-fade-soft" loading="lazy" />
+          <img src={galleryImages[3]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-[4/5] object-cover img-fade-soft" loading="lazy" />
+          <img src={galleryImages[4]} alt="Clínica" className="col-span-3 md:col-span-2 aspect-[4/5] object-cover img-fade-soft" loading="lazy" />
+          <img src={galleryImages[5]} alt="Clínica" className="col-span-6 md:col-span-2 aspect-[4/5] object-cover img-fade-soft" loading="lazy" />
         </div>
       </div>
     </section>

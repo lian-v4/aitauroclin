@@ -190,7 +190,7 @@ function Hero() {
             <img
               src={heroPortrait}
               alt="Dr. Giuliano Aita — urologista"
-              className="relative w-full aspect-[4/5] object-cover [object-position:72%_18%] img-fade-radial"
+              className="relative w-full aspect-[4/5] object-cover [object-position:18%_18%] img-fade-radial"
               loading="eager"
             />
           </figure>
@@ -342,7 +342,7 @@ function Bio() {
             <img
               src={portraitBio}
               alt="Dr. Giuliano Aita"
-              className="w-full aspect-[4/5] object-cover [object-position:28%_15%] mb-8 img-fade-b"
+              className="w-full aspect-[4/5] object-cover [object-position:82%_15%] mb-8 img-fade-b"
               loading="lazy"
             />
             <dl className="space-y-5 border-t border-border pt-8 text-sm">

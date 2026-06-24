@@ -275,6 +275,7 @@ function TreatmentsFeatured() {
                   Saiba Mais
                   <ArrowUpRight className="size-3.5" />
                 </a>
+              </div>
             </article>
           ))}
         </div>

@@ -127,7 +127,7 @@ function TratamentosPage() {
 
   return (
     <div className="bg-background text-foreground font-sans min-h-screen py-16 md:py-24 selection:bg-brass/25 selection:text-ink">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         
         {/* Header */}
         <header className="max-w-3xl mb-16 md:mb-24">
@@ -200,7 +200,7 @@ function TratamentosPage() {
                             <ArrowUpRight className="size-4" />
                           </button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-2xl bg-bone text-ink border-border shadow-2xl p-8 rounded-lg">
+                        <DialogContent className="w-[92vw] sm:w-full max-w-2xl bg-bone text-ink border-border shadow-2xl p-8 rounded-lg">
                           {selectedTreatment && (
                             <>
                               <DialogHeader className="mb-6">
@@ -292,7 +292,7 @@ function TratamentosPage() {
                       <ArrowUpRight className="size-3.5" />
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-2xl bg-bone text-ink border-border shadow-2xl p-8 rounded-lg">
+                  <DialogContent className="w-[92vw] sm:w-full max-w-2xl bg-bone text-ink border-border shadow-2xl p-8 rounded-lg">
                     {selectedTreatment && (
                       <>
                         <DialogHeader className="mb-6">

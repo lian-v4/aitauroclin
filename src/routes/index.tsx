@@ -43,7 +43,7 @@ function Index() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-bone via-bone to-bone-soft/40">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-20 md:pb-28 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-20 md:pb-28 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
         <div className="md:col-span-7">
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-8 bg-brass" />
@@ -104,7 +104,7 @@ function Marquee() {
   ];
   return (
     <div className="border-y border-border bg-bone-soft/40 py-5">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-ink/60 font-medium">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-ink/60 font-medium">
         <span className="text-brass">Formação & Filiações</span>
         {items.map((i) => (
           <span key={i} className="flex items-center gap-8">
@@ -144,7 +144,7 @@ function HomeTreatments() {
 
   return (
     <section className="py-20 md:py-28 bg-bone-soft/20 border-b border-border">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b border-border pb-10 mb-12">
           <div>
             <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
@@ -205,7 +205,7 @@ function HomeTreatments() {
 function HomeBio() {
   return (
     <section className="py-20 md:py-28 bg-bone border-b border-border">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-5">
           <figure className="relative">
             <img
@@ -260,7 +260,7 @@ function HomeBio() {
 function HomeClinic() {
   return (
     <section className="py-20 md:py-28 bg-bone-soft/10 border-b border-border">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end mb-12">
           <div className="md:col-span-7">
             <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
@@ -335,7 +335,7 @@ function HomeNews() {
 
   return (
     <section className="py-20 md:py-28 bg-bone border-b border-border">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b border-border pb-10 mb-12">
           <div>
             <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">

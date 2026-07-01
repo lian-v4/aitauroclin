@@ -83,7 +83,7 @@ function ContatoPage() {
 
   return (
     <div className="bg-background text-foreground font-sans min-h-screen py-16 md:py-24 selection:bg-brass/25 selection:text-ink">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         
         {/* Header */}
         <header className="max-w-3xl mb-16 md:mb-20">

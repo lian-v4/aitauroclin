@@ -126,7 +126,7 @@ function RootComponent() {
       <div className="bg-background text-foreground font-sans antialiased selection:bg-brass/25 selection:text-ink min-h-screen flex flex-col">
         {/* Navigation */}
         <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-          <div className="max-w-screen-xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
             <Link to="/" className="font-serif text-xl tracking-tight font-medium text-ink leading-none">
               Giuliano <span className="italic text-brass">Aita</span>
               <span className="block text-[9px] font-sans uppercase tracking-[0.28em] text-muted-foreground mt-1">
@@ -212,7 +212,7 @@ function RootComponent() {
 
         {/* Footer */}
         <footer className="bg-ink text-bone py-16 border-t border-bone/5">
-          <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-14">
               <div>
                 <div className="font-serif text-3xl md:text-4xl leading-none tracking-tight">

@@ -1,0 +1,1 @@
+import{t as e}from"./createLucideIcon-B4jqqaQH.js";var t=e(`clock`,[[`circle`,{cx:`12`,cy:`12`,r:`10`,key:`1mglay`}],[`path`,{d:`M12 6v6l4 2`,key:`mmk7yg`}]]),n=`/assets/clinic-5-B1eNauxD.jpg`,r=`/assets/clinic-6-pLQJD0E0.jpg`;export{n,t as r,r as t};

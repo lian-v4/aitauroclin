@@ -133,7 +133,7 @@ function RootComponent() {
                 Urologia · Saúde Masculina
               </span>
             </Link>
-            
+
             <nav className="hidden md:flex gap-9 items-center text-[11px] tracking-[0.18em] uppercase font-medium text-ink/80">
               <Link to="/tratamentos" className="hover:text-brass transition-colors" activeProps={{ className: "text-brass font-semibold" }}>Tratamentos</Link>
               <Link to="/sobre" className="hover:text-brass transition-colors" activeProps={{ className: "text-brass font-semibold" }}>Conheça o Dr.</Link>
@@ -161,32 +161,32 @@ function RootComponent() {
           {/* Mobile Navigation Dropdown */}
           {mobileMenuOpen && (
             <nav className="md:hidden border-t border-border bg-background py-6 px-6 flex flex-col gap-5 text-[11px] tracking-[0.18em] uppercase font-medium text-ink/80 animate-in fade-in slide-in-from-top-5 duration-200">
-              <Link 
-                to="/tratamentos" 
+              <Link
+                to="/tratamentos"
                 onClick={() => setMobileMenuOpen(false)}
                 className="hover:text-brass transition-colors py-2 border-b border-border/50"
                 activeProps={{ className: "text-brass font-semibold" }}
               >
                 Tratamentos
               </Link>
-              <Link 
-                to="/sobre" 
+              <Link
+                to="/sobre"
                 onClick={() => setMobileMenuOpen(false)}
                 className="hover:text-brass transition-colors py-2 border-b border-border/50"
                 activeProps={{ className: "text-brass font-semibold" }}
               >
                 Conheça o Dr.
               </Link>
-              <Link 
-                to="/clinica" 
+              <Link
+                to="/clinica"
                 onClick={() => setMobileMenuOpen(false)}
                 className="hover:text-brass transition-colors py-2 border-b border-border/50"
                 activeProps={{ className: "text-brass font-semibold" }}
               >
                 A Clínica
               </Link>
-              <Link 
-                to="/publicacoes" 
+              <Link
+                to="/publicacoes"
                 onClick={() => setMobileMenuOpen(false)}
                 className="hover:text-brass transition-colors py-2 border-b border-border/50"
                 activeProps={{ className: "text-brass font-semibold" }}

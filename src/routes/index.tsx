@@ -43,8 +43,8 @@ function Index() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-bone via-bone to-bone-soft/40">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-20 md:pb-28 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
-        <div className="md:col-span-7">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-0 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+        <div className="md:col-span-6 pb-20 md:pb-28">
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-8 bg-brass" />
             <span className="font-serif italic text-brass text-sm md:text-base">
@@ -73,12 +73,12 @@ function Hero() {
             </Link>
           </div>
         </div>
-        <div className="md:col-span-5 flex justify-center md:justify-end items-end">
-          <div className="relative w-full max-w-[480px] md:max-w-none md:w-[115%] md:-mr-[10%] lg:-mr-[15%]">
+        <div className="md:col-span-6 self-end flex justify-center md:justify-end">
+          <div className="relative w-full max-w-[500px] md:max-w-none md:w-[125%] md:-mr-[15%] lg:w-[135%] lg:-mr-[25%]">
             <img
               src={heroPortrait}
               alt="Dr. Giuliano Aita"
-              className="w-full h-auto object-contain max-h-[600px] md:max-h-[680px]"
+              className="w-full h-auto object-contain max-h-[550px] md:max-h-[700px] scale-110 md:scale-125 origin-bottom translate-y-1"
               loading="eager"
             />
           </div>
@@ -198,19 +198,19 @@ function HomeTreatments() {
 
 function HomeBio() {
   return (
-    <section className="py-20 md:py-28 bg-bone border-b border-border">
+    <section className="pt-20 md:pt-28 pb-0 bg-bone border-b border-border overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        <div className="md:col-span-5 flex justify-center items-end">
-          <div className="relative w-full max-w-[480px] md:max-w-none md:w-[115%] md:-ml-[10%] lg:-ml-[15%]">
+        <div className="md:col-span-5 self-end flex justify-center items-end">
+          <div className="relative w-full max-w-[480px] md:max-w-none md:w-[125%] md:-ml-[15%] lg:w-[135%] lg:-ml-[25%]">
             <img
               src={portraitBio}
               alt="Dr. Giuliano Aita"
-              className="w-full h-auto object-contain max-h-[600px] md:max-h-[680px]"
+              className="w-full h-auto object-contain max-h-[550px] md:max-h-[700px] scale-110 md:scale-125 origin-bottom translate-y-1"
               loading="lazy"
             />
           </div>
         </div>
-        <div className="md:col-span-7">
+        <div className="md:col-span-7 pb-20 md:pb-28">
           <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
             Corpo Clínico
           </span>

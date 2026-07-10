@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
-import heroPortrait from "@/assets/FAB_0010.jpg_2K_202607101340.jpeg";
+import heroPortrait from "@/assets/FAB_0010.jpg_2K_202607101340.png";
 import portraitBio from "@/assets/hero-2-semfundo.png";
 import clinic1 from "@/assets/clinic-1.jpg";
 import clinic2 from "@/assets/clinic-2.jpg";

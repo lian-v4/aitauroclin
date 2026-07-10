@@ -73,21 +73,15 @@ function Hero() {
             </Link>
           </div>
         </div>
-        <div className="md:col-span-5">
-          <figure className="relative bg-gradient-to-b from-bone-soft to-bone/10 rounded-2xl overflow-hidden border border-border/20 shadow-sm">
-            <span
-              aria-hidden
-              className="absolute left-4 top-8 font-serif italic text-brass/45 text-[10px] tracking-[0.18em] rotate-[-90deg] origin-top-left hidden md:block z-20"
-            >
-              Dr. Giuliano Aita · CRM-SP
-            </span>
+        <div className="md:col-span-5 flex justify-center md:justify-end items-end">
+          <div className="relative w-full max-w-[480px] md:max-w-none md:w-[115%] md:-mr-[10%] lg:-mr-[15%]">
             <img
               src={heroPortrait}
               alt="Dr. Giuliano Aita"
-              className="relative w-full aspect-[4/5] object-contain object-bottom z-10"
+              className="w-full h-auto object-contain max-h-[600px] md:max-h-[680px]"
               loading="eager"
             />
-          </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -206,15 +200,15 @@ function HomeBio() {
   return (
     <section className="py-20 md:py-28 bg-bone border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        <div className="md:col-span-5">
-          <figure className="relative bg-gradient-to-b from-bone-soft/80 to-bone/20 rounded-2xl overflow-hidden border border-border/20 shadow-sm">
+        <div className="md:col-span-5 flex justify-center items-end">
+          <div className="relative w-full max-w-[480px] md:max-w-none md:w-[115%] md:-ml-[10%] lg:-ml-[15%]">
             <img
               src={portraitBio}
               alt="Dr. Giuliano Aita"
-              className="w-full aspect-[4/5] object-contain object-bottom"
+              className="w-full h-auto object-contain max-h-[600px] md:max-h-[680px]"
               loading="lazy"
             />
-          </figure>
+          </div>
         </div>
         <div className="md:col-span-7">
           <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">

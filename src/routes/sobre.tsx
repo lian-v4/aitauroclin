@@ -74,17 +74,17 @@ function SobrePage() {
           {/* Sidebar Left: Picture and Fast Credentials */}
           <aside className="md:col-span-4 flex flex-col">
             <div className="md:sticky md:top-28">
-              <figure className="relative mb-8 rounded-lg overflow-hidden bg-gradient-to-b from-bone-soft/60 to-bone/10 border border-border/20 shadow-sm">
+              <div className="relative mb-8 flex justify-center items-end bg-gradient-to-b from-bone-soft/40 to-transparent rounded-lg overflow-hidden">
                 <img
                   src={portraitBio}
                   alt="Dr. Giuliano Aita"
-                  className="w-full aspect-[4/5] object-contain object-bottom relative z-10"
+                  className="w-full h-auto object-contain max-h-[450px] relative z-10"
                   loading="eager"
                 />
-                <figcaption className="absolute bottom-4 left-4 bg-ink/90 text-bone text-[10px] uppercase tracking-[0.22em] px-3 py-1.5 rounded z-20">
+                <span className="absolute bottom-4 left-4 bg-ink/90 text-bone text-[10px] uppercase tracking-[0.22em] px-3 py-1.5 rounded z-20">
                   Dr. Giuliano Aita · CRM-SP 123.456
-                </figcaption>
-              </figure>
+                </span>
+              </div>
 
               <div className="bg-bone-soft/30 border border-border/60 rounded-lg p-6">
                 <h3 className="font-serif text-lg font-medium text-ink mb-4 border-b border-border/80 pb-2">Unidades de Atendimento</h3>

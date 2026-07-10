@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, GraduationCap, Award, Landmark, BookOpen } from "lucide-react";
 
-import portraitBio from "@/assets/hero-2.jpg";
+import portraitBio from "@/assets/hero-2-semfundo.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -18,7 +18,7 @@ function SobrePage() {
     { value: "20+", label: "Anos de Experiência", desc: "Dedicados integralmente à urologia e saúde sexual." },
     { value: "10k+", label: "Pacientes Atendidos", desc: "Casos clínicos e cirúrgicos tratados com excelência." },
     { value: "50+", label: "Artigos & Palestras", desc: "Produção científica nacional e internacional." },
-    { value: "4+", label: "Sociedades Médicas", desc: "Membro das principais entidades de urologia e andrologia." },
+    { value: "4+", label: "Sociedades Médicas", desc: "Membro das principais entidades de urologia andrologia." },
   ];
 
   const credentials = [
@@ -74,14 +74,14 @@ function SobrePage() {
           {/* Sidebar Left: Picture and Fast Credentials */}
           <aside className="md:col-span-4 flex flex-col">
             <div className="md:sticky md:top-28">
-              <figure className="relative mb-8 rounded-lg overflow-hidden">
+              <figure className="relative mb-8 rounded-lg overflow-hidden bg-gradient-to-b from-bone-soft/60 to-bone/10 border border-border/20 shadow-sm">
                 <img
                   src={portraitBio}
                   alt="Dr. Giuliano Aita"
-                  className="w-full aspect-[4/5] object-cover [object-position:82%_15%] img-fade-b"
+                  className="w-full aspect-[4/5] object-contain object-bottom relative z-10"
                   loading="eager"
                 />
-                <figcaption className="absolute bottom-4 left-4 bg-ink/90 text-bone text-[10px] uppercase tracking-[0.22em] px-3 py-1.5 rounded">
+                <figcaption className="absolute bottom-4 left-4 bg-ink/90 text-bone text-[10px] uppercase tracking-[0.22em] px-3 py-1.5 rounded z-20">
                   Dr. Giuliano Aita · CRM-SP 123.456
                 </figcaption>
               </figure>

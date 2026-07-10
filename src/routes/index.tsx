@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
-import heroPortrait from "@/assets/hero-3.jpg";
-import portraitBio from "@/assets/hero-2.jpg";
+import heroPortrait from "@/assets/hero-3-semfundo.png";
+import portraitBio from "@/assets/hero-2-semfundo.png";
 import clinic1 from "@/assets/clinic-1.jpg";
 import clinic2 from "@/assets/clinic-2.jpg";
 import clinic3 from "@/assets/clinic-3.jpg";
@@ -74,17 +74,17 @@ function Hero() {
           </div>
         </div>
         <div className="md:col-span-5">
-          <figure className="relative">
+          <figure className="relative bg-gradient-to-b from-bone-soft to-bone/10 rounded-2xl overflow-hidden border border-border/20 shadow-sm">
             <span
               aria-hidden
-              className="absolute -left-6 top-8 font-serif italic text-brass/40 text-xs tracking-[0.18em] rotate-[-90deg] origin-top-left hidden md:block"
+              className="absolute left-4 top-8 font-serif italic text-brass/45 text-[10px] tracking-[0.18em] rotate-[-90deg] origin-top-left hidden md:block z-20"
             >
               Dr. Giuliano Aita · CRM-SP
             </span>
             <img
               src={heroPortrait}
               alt="Dr. Giuliano Aita"
-              className="relative w-full aspect-[4/5] object-cover [object-position:18%_18%] img-fade-radial"
+              className="relative w-full aspect-[4/5] object-contain object-bottom z-10"
               loading="eager"
             />
           </figure>
@@ -207,11 +207,11 @@ function HomeBio() {
     <section className="py-20 md:py-28 bg-bone border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-5">
-          <figure className="relative">
+          <figure className="relative bg-gradient-to-b from-bone-soft/80 to-bone/20 rounded-2xl overflow-hidden border border-border/20 shadow-sm">
             <img
               src={portraitBio}
               alt="Dr. Giuliano Aita"
-              className="w-full aspect-[4/5] object-cover [object-position:82%_15%] img-fade-radial"
+              className="w-full aspect-[4/5] object-contain object-bottom"
               loading="lazy"
             />
           </figure>

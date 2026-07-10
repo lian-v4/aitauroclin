@@ -43,8 +43,8 @@ function Index() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-bone via-bone to-bone-soft/40">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-20 md:pb-28 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
-        <div className="md:col-span-7">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-0 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+        <div className="md:col-span-6 pb-20 md:pb-28">
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-8 bg-brass" />
             <span className="font-serif italic text-brass text-sm md:text-base">
@@ -73,21 +73,15 @@ function Hero() {
             </Link>
           </div>
         </div>
-        <div className="md:col-span-5">
-          <figure className="relative rounded-lg overflow-hidden border border-border/10 shadow-md">
-            <span
-              aria-hidden
-              className="absolute -left-6 top-8 font-serif italic text-brass/40 text-xs tracking-[0.18em] rotate-[-90deg] origin-top-left hidden md:block z-20"
-            >
-              Dr. Giuliano Aita · CRM-SP
-            </span>
+        <div className="md:col-span-6 self-end flex justify-center md:justify-end">
+          <div className="relative w-full max-w-[500px] md:max-w-none md:w-[125%] md:-mr-[15%] lg:w-[135%] lg:-mr-[25%]">
             <img
               src={heroPortrait}
               alt="Dr. Giuliano Aita"
-              className="relative w-full aspect-[4/5] object-cover object-center img-fade-radial"
+              className="w-full h-auto object-contain max-h-[550px] md:max-h-[700px] scale-110 md:scale-125 origin-bottom translate-y-1"
               loading="eager"
             />
-          </figure>
+          </div>
         </div>
       </div>
     </section>

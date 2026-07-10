@@ -24,27 +24,27 @@ function SobrePage() {
   const credentials = [
     {
       icon: GraduationCap,
-      title: "Doutorado em Ciências",
-      institution: "AC Camargo Cancer Center · São Paulo",
-      details: "Tese defendida na área de oncologia/urologia, unindo pesquisa acadêmica avançada e prática clínica de alta precisão."
+      title: "Mestrado & Doutorado em Urologia",
+      institution: "Formação Acadêmica de Alto Nível",
+      details: "Estudos voltados à inovação apresentados nos congressos mundiais da SIU (Glasgow, 2014) e AUA (San Diego, 2016)."
     },
     {
       icon: Award,
-      title: "Membro Titular",
-      institution: "Sociedade Brasileira de Urologia (SBU)",
-      details: "Especialista certificado, atuando ativamente nas comissões científicas e de formação profissional contínua."
+      title: "Uro-Oncologia",
+      institution: "Moffitt Cancer Center · EUA",
+      details: "Estágio de aperfeiçoamento em 2019 em um dos mais renomados e prestigiados centros oncológicos dos Estados Unidos."
     },
     {
       icon: Landmark,
-      title: "Membro Internacional",
-      institution: "International Society for Sexual Medicine (ISSM)",
-      details: "Alinhamento com as mais recentes diretrizes e protocolos globais para reabilitação sexual e cirurgia reconstrutiva."
+      title: "Liderança na Andrologia",
+      institution: "Sociedade Brasileira de Urologia",
+      details: "Membro do Departamento de Andrologia (2016-2024), exercendo sua coordenação nacional no biênio 2018-2022."
     },
     {
       icon: BookOpen,
-      title: "Diretoria Nacional",
-      institution: "ABEMSS (Saúde Sexual)",
-      details: "Associação Brasileira de Estudos em Medicina e Saúde Sexual. Atuação no desenvolvimento da especialidade no país."
+      title: "Atuação em São Paulo",
+      institution: "Sírio-Libanês & Vila Nova Star",
+      details: "Integra o corpo clínico urológico de dois dos hospitais de maior prestígio e alta complexidade do Brasil."
     }
   ];
 
@@ -64,7 +64,7 @@ function SobrePage() {
             Conheça o <span className="italic font-normal">Dr. Giuliano Aita</span>
           </h1>
           <p className="text-base md:text-lg text-ink/75 leading-relaxed font-light">
-            Trajetória dedicada à excelência médica, unindo a precisão da técnica cirúrgica ao acolhimento integral do paciente.
+            Trajetória de mais de 20 anos marcada pela sólida formação acadêmica, inovação tecnológica, produção científica e liderança na urologia.
           </p>
         </header>
 
@@ -108,21 +108,68 @@ function SobrePage() {
           <div className="md:col-span-8 flex flex-col justify-between">
             <div className="space-y-8">
               <blockquote className="font-serif text-2xl md:text-3xl italic text-ink/85 leading-relaxed border-l-2 border-brass pl-6 py-2">
-                “A medicina urológica de excelência não se limita ao diagnóstico preciso — ela reside no profundo respeito à individualidade e ao bem-estar do homem em todas as fases da vida.”
+                “Mais do que acompanhar a evolução da urologia, nosso compromisso é contribuir ativamente para construí-la de forma ética e segura.”
               </blockquote>
 
               <div className="space-y-6 text-base text-ink/75 leading-relaxed font-light text-pretty">
                 <p>
-                  Com mais de duas décadas dedicadas à medicina, o <strong>Dr. Giuliano Aita</strong> consolidou-se como uma das principais referências brasileiras em urologia geral, andrologia e medicina sexual masculina contemporânea. Sua atuação integra de forma harmônica a excelência da pesquisa acadêmica com uma prática cirúrgica altamente qualificada.
+                  O <strong>Dr. Giuliano Aita</strong> é médico urologista, mestre e doutor, com mais de 20 anos de experiência dedicados à Urologia, uro-oncologia e saúde sexual masculina. Sua trajetória é marcada pela combinação entre sólida formação acadêmica, inovação tecnológica, produção científica e liderança na evolução da Urologia brasileira.
                 </p>
                 <p>
-                  Obteve o título de <strong>Doutor em Ciências</strong> pelo renomado <strong>AC Camargo Cancer Center</strong> em São Paulo, onde desenvolveu pesquisas na área oncológica e de reabilitação. É conferencista ativo nos principais congressos nacionais e internacionais da área, compartilhando avanços e refinamentos técnicos em procedimentos de alta complexidade.
+                  Concluiu o Mestrado e o Doutorado em Urologia desenvolvendo pesquisas voltadas à inovação na especialidade. Seus estudos científicos de destaque foram apresentados em dois dos mais importantes congressos mundiais da especialidade: o Congresso da Sociedade Internacional de Urologia (SIU), em Glasgow, Escócia (2014), e o Congresso da American Urological Association (AUA), em San Diego, Estados Unidos (2016). Em 2019, realizou estágio de aperfeiçoamento em uro-oncologia no prestigiado <strong>Moffitt Cancer Center</strong>, um dos mais renomados centros oncológicos dos Estados Unidos.
                 </p>
                 <p>
-                  Além da prática de consultório, o Dr. Giuliano Aita desempenha papel estratégico em entidades médicas de vanguarda. É membro titular da <strong>Sociedade Brasileira de Urologia (SBU)</strong>, da <strong>International Society for Sexual Medicine (ISSM)</strong> e compõe a diretoria nacional da <strong>Associação Brasileira de Estudos em Medicina e Saúde Sexual (ABEMSS)</strong>.
+                  Sua atuação assistencial e de ensino também se consolidou no serviço público, sendo o primeiro colocado no concurso para médico urologista do Hospital Universitário da Universidade Federal do Piauí (HU-UFPI). No HU-UFPI, exerceu papel fundamental para a incorporação de técnicas cirúrgicas avançadas renais percutâneas, endoscópicas e videolaparoscópicas, atuando também na formação de novos residentes. Durante vários anos, integrou a equipe de transplante renal no Piauí, contribuindo decisivamente para o desenvolvimento do programa de transplantes do estado.
                 </p>
                 <p>
-                  Seus consultórios em São Paulo e Teresina foram projetados especificamente para oferecer uma experiência clínica única: um porto seguro onde privacidade absoluta, hospitalidade premium e rigor técnico são os pilares de cada atendimento.
+                  Atualmente, integra as conceituadas equipes de Urologia do <strong>Hospital Sírio-Libanês</strong> e <strong>Vila Nova Star</strong>, em São Paulo, conciliando a prática clínica de alta complexidade com a pesquisa, o ensino e a constante atualização científica.
+                </p>
+                <p>
+                  Sua filosofia clínica é pautada na medicina baseada em evidências, na incorporação responsável de novas tecnologias e em um atendimento individualizado e humanizado, oferecendo aos pacientes o que há de mais moderno e seguro em saúde urológica e sexual masculina.
+                </p>
+              </div>
+            </div>
+
+            {/* Pioneering Section */}
+            <div className="mt-16 border-t border-border pt-12">
+              <h2 className="font-serif text-2xl font-medium text-ink mb-6">Pioneirismo & Avanços Tecnológicos</h2>
+              <p className="text-xs md:text-sm text-ink/70 leading-relaxed font-light mb-8">
+                Ao longo de sua carreira, liderou a introdução de importantes marcos tecnológicos e tratamentos minimamente invasivos:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="p-5 border border-border/50 rounded-lg hover:border-brass/35 transition-colors">
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-brass mb-2 block font-semibold">Tecnologia Cirúrgica</span>
+                  <p className="text-xs text-ink/80 leading-relaxed font-light">
+                    Realizou a <strong>primeira nefrectomia radical por videolaparoscopia</strong> do Piauí e liderou a implementação de cirurgias renais percutâneas e endoscópicas.
+                  </p>
+                </div>
+                <div className="p-5 border border-border/50 rounded-lg hover:border-brass/35 transition-colors">
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-brass mb-2 block font-semibold">Endourologia & Laser</span>
+                  <p className="text-xs text-ink/80 leading-relaxed font-light">
+                    Pioneiro na utilização do laser em <strong>ureteroscopia flexível</strong> para tratamento de cálculos urinários no estado do Piauí.
+                  </p>
+                </div>
+                <div className="p-5 border border-border/50 rounded-lg hover:border-brass/35 transition-colors">
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-brass mb-2 block font-semibold">Tratamento de Próstata (HPB)</span>
+                  <p className="text-xs text-ink/80 leading-relaxed font-light">
+                    Introduziu pioneiramente a vaporização da próstata e a moderna terapia com vapor de água <strong>(Rezum)</strong> para Hiperplasia Prostática Benigna.
+                  </p>
+                </div>
+                <div className="p-5 border border-border/50 rounded-lg hover:border-brass/35 transition-colors">
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-brass mb-2 block font-semibold">Medicina Sexual & Regenerativa</span>
+                  <p className="text-xs text-ink/80 leading-relaxed font-light">
+                    Pioneiro na incorporação de <strong>ondas de choque de baixa intensidade</strong> para disfunção erétil no Brasil e da tecnologia <strong>Emsella</strong> para reabilitação pélvica.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Ensino e Formação */}
+            <div className="mt-16 border-t border-border pt-12">
+              <h2 className="font-serif text-2xl font-medium text-ink mb-6">Educação Médica & Formação Científica</h2>
+              <div className="space-y-4 text-xs md:text-sm text-ink/75 leading-relaxed font-light">
+                <p>
+                  Dr. Giuliano Aita demonstra forte compromisso com a formação de novas gerações de especialistas. Organizou o primeiro <strong>Stone Free Day</strong> no Piauí, voltado ao treinamento prático em Endourologia, e atua constantemente como palestrante em congressos nacionais e internacionais, instrutor em cursos de atualização médica e revisor científico de periódicos urológicos especializados.
                 </p>
               </div>
             </div>

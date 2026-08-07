@@ -177,3 +177,13 @@
   -webkit-mask-image: linear-gradient(to top, #000 60%, transparent 100%);
   mask-image: linear-gradient(to top, #000 60%, transparent 100%);
 }
+
+/* Marquee / ticker animation */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-marquee-slow {
+  animation: marquee-scroll 30s linear infinite;
+}

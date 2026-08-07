@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Shield, Award, Microscope } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
-import heroPortrait from "@/assets/FAB_0060.png";
-import portraitBio from "@/assets/hero-2-semfundo.png";
-import clinic1 from "@/assets/clinic-1.jpg";
-import clinic2 from "@/assets/clinic-2.jpg";
-import clinic3 from "@/assets/clinic-3.jpg";
-import clinic4 from "@/assets/clinic-4.jpg";
-import clinic5 from "@/assets/clinic-5.jpg";
+import heroPortrait from "@/assets/dr-aita-hero.jpg";
+import portraitBio from "@/assets/dr-aita-bio.jpg";
+import clinicFacade from "@/assets/clinic-facade.jpg";
+import clinicEntrance from "@/assets/clinic-entrance.jpg";
+import clinicProcedure from "@/assets/clinic-procedure.jpg";
+import clinicConsult from "@/assets/clinic-consult.jpg";
 import treatmentUrofill from "@/assets/treatment-urofill.jpg";
 import treatmentRezum from "@/assets/treatment-rezum.jpg";
 import treatmentShockwave from "@/assets/treatment-shockwave.jpg";
@@ -26,6 +26,25 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+// Hook para detectar elementos visíveis (scroll animations)
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setInView(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+
+  return { ref, inView };
+}
+
 function Index() {
   return (
     <div className="bg-background text-foreground font-sans antialiased selection:bg-brass/25 selection:text-ink">
@@ -34,32 +53,53 @@ function Index() {
       <HomeTreatments />
       <HomeBio />
       <HomeClinic />
-      <HomeNews />
+      <HomeStats />
       <HomeCTA />
     </div>
   );
 }
 
 function Hero() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoaded(true), 80);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-bone via-bone to-bone-soft/40">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 md:pt-20 pb-0 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
-        <div className="md:col-span-6 pb-20 md:pb-28">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="h-px w-8 bg-brass" />
-            <span className="font-serif italic text-brass text-sm md:text-base">
+    <section className="relative overflow-hidden bg-gradient-to-br from-bone via-bone to-bone-soft/60 min-h-[92vh] flex items-center">
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0iIzNkMzYyMiIvPjwvc3ZnPg==')] pointer-events-none" />
+
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 md:py-0 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0 items-center w-full">
+        {/* Text column */}
+        <div
+          className="md:col-span-6 pb-0 md:pb-16 z-10"
+          style={{
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0)" : "translateY(28px)",
+            transition: "opacity 0.9s ease, transform 0.9s ease",
+          }}
+        >
+          <div className="flex items-center gap-3 mb-7">
+            <span className="h-px w-10 bg-brass" />
+            <span className="font-serif italic text-brass text-sm md:text-base tracking-wide">
               Urologia Avançada & Andrologia
             </span>
           </div>
-          <h1 className="font-serif text-[2.5rem] sm:text-5xl md:text-[4.5rem] leading-[1.05] tracking-[-0.02em] font-medium mb-8 max-w-[20ch]">
-            Urologia de alta precisão pautada pela <span className="italic font-normal">discrição</span>.
+          <h1 className="font-serif text-[2.6rem] sm:text-5xl md:text-[4.8rem] leading-[1.04] tracking-[-0.025em] font-medium mb-8 max-w-[18ch]">
+            Excelência urológica com{" "}
+            <span className="italic font-normal text-brass/90">discrição</span>{" "}
+            e precisão absoluta.
           </h1>
-          <p className="text-base md:text-lg text-ink/75 leading-relaxed max-w-[50ch] text-pretty mb-10 font-light">
-            Centro de excelência médica sob coordenação do Dr. Giuliano Aita. Oferecemos soluções urológicas e andrológicas inovadoras em ambientes planejados para a sua total privacidade.
+          <p className="text-base md:text-lg text-ink/70 leading-relaxed max-w-[48ch] text-pretty mb-10 font-light">
+            Centro de referência em saúde masculina sob coordenação do Dr. Giuliano Aita — especialista com atuação nos maiores hospitais do Brasil e reconhecimento científico internacional.
           </p>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-5">
             <Link
               to="/contato"
+              id="hero-cta-agendar"
               className="group inline-flex items-center gap-3 bg-ink text-bone px-7 py-4 text-xs tracking-[0.22em] uppercase hover:bg-brass transition-colors duration-500"
             >
               Agendar Consulta
@@ -67,20 +107,36 @@ function Hero() {
             </Link>
             <Link
               to="/sobre"
-              className="text-xs tracking-[0.22em] uppercase text-ink/70 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 transition-colors"
+              id="hero-cta-conhecer"
+              className="text-xs tracking-[0.22em] uppercase text-ink/65 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 transition-colors duration-300"
             >
-              Conheça o Dr.
+              Conheça o Dr. Aita
             </Link>
           </div>
         </div>
-        <div className="md:col-span-6 self-end flex justify-center md:justify-end">
-          <div className="relative w-full max-w-[500px] md:max-w-none md:w-[125%] md:-mr-[15%] lg:w-[135%] lg:-mr-[25%]">
+
+        {/* Photo column */}
+        <div className="md:col-span-6 self-stretch flex justify-center md:justify-end items-end">
+          <div
+            className="relative w-full max-w-[480px] md:max-w-none md:w-[108%] md:-mr-[8%] lg:w-[115%] lg:-mr-[10%]"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transform: loaded ? "translateX(0)" : "translateX(40px)",
+              transition: "opacity 1.1s ease 0.15s, transform 1.1s ease 0.15s",
+            }}
+          >
             <img
               src={heroPortrait}
-              alt="Dr. Giuliano Aita"
-              className="w-full h-auto object-contain max-h-[550px] md:max-h-[700px] scale-110 md:scale-125 origin-bottom translate-y-1"
+              alt="Dr. Giuliano Aita — Urologista e Andrologista"
+              className="w-full h-auto object-cover object-top max-h-[85vh] md:max-h-[92vh]"
+              style={{ objectPosition: "50% 15%" }}
               loading="eager"
             />
+            {/* Credencial badge */}
+            <div className="absolute bottom-6 left-6 bg-ink/90 backdrop-blur-sm text-bone px-4 py-2.5 rounded flex items-center gap-2">
+              <Shield className="size-3.5 text-brass shrink-0" />
+              <span className="text-[10px] uppercase tracking-[0.2em] font-medium">CRM Verificado · SP & PI</span>
+            </div>
           </div>
         </div>
       </div>
@@ -95,14 +151,15 @@ function Marquee() {
     "International Society for Sexual Medicine",
     "American Urological Association",
     "Sociedade Brasileira de Urologia",
+    "Hospital Sírio-Libanês",
+    "Vila Nova Star · SP",
   ];
   return (
-    <div className="border-y border-border bg-bone-soft/40 py-5">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-ink/60 font-medium">
-        <span className="text-brass">Formação & Filiações</span>
-        {items.map((i) => (
-          <span key={i} className="flex items-center gap-8">
-            <span className="size-1 rounded-full bg-ink/20" />
+    <div className="border-y border-border bg-ink py-4 overflow-hidden">
+      <div className="flex items-center gap-x-10 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-bone/50 font-medium whitespace-nowrap animate-marquee-slow">
+        {[...items, ...items].map((i, idx) => (
+          <span key={idx} className="flex items-center gap-10 shrink-0">
+            <span className="size-1 rounded-full bg-brass/60 shrink-0" />
             {i}
           </span>
         ))}
@@ -112,77 +169,98 @@ function Marquee() {
 }
 
 function HomeTreatments() {
+  const { ref, inView } = useInView();
   const primaryTreatments = [
     {
       n: "01",
       name: "UroFill®",
       short: "Estética Íntima Masculina",
-      desc: "Única técnica patenteada internacionalmente para engrossamento peniano, realizada sob anestesia local em ambiente clínico privativo.",
+      desc: "Única técnica patenteada internacionalmente para engrossamento peniano, realizada com segurança e total privacidade em ambiente clínico de alto padrão.",
       image: treatmentUrofill,
+      icon: Microscope,
     },
     {
       n: "02",
       name: "Rezum",
-      short: "Hiperplasia Prostática",
-      desc: "Tratamento de ponta com vapor d'água para redução benigna da próstata, com preservação da função erétil e ejaculatória.",
+      short: "Hiperplasia Prostática Benigna",
+      desc: "Tratamento minimamente invasivo com vapor d'água para HPB. Tecnologia de vanguarda que preserva integralmente a função erétil e ejaculatória.",
       image: treatmentRezum,
+      icon: Shield,
     },
     {
       n: "03",
       name: "Ondas de Choque",
-      short: "Terapia de Ondas acústicas",
-      desc: "Procedimento não invasivo de consultório para estimulação vascular peniana, restaurando a espontaneidade das ereções.",
+      short: "Terapia Vascular Peniana",
+      desc: "Procedimento ambulatorial não-invasivo para estimulação vascular e restauração da potência erétil espontânea. Sem cirurgia, sem internação.",
       image: treatmentShockwave,
+      icon: Award,
     },
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-bone-soft/20 border-b border-border">
+    <section className="py-24 md:py-32 bg-bone-soft/15 border-b border-border" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b border-border pb-10 mb-12">
+        <div
+          className="flex flex-col md:flex-row md:items-end md:justify-between border-b border-border pb-10 mb-14"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s ease, transform 0.7s ease",
+          }}
+        >
           <div>
             <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
               Especialidades Médicas
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-medium leading-none tracking-tight">
-              Procedimentos de <span className="italic">Vanguarda</span>
+              Procedimentos de <span className="italic font-normal">Vanguarda</span>
             </h2>
           </div>
           <Link
             to="/tratamentos"
-            className="text-[11px] uppercase tracking-[0.22em] text-ink/75 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 self-start md:self-end mt-4 md:mt-0 inline-flex items-center gap-2"
+            id="treatments-ver-portfolio"
+            className="text-[11px] uppercase tracking-[0.22em] text-ink/70 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 self-start md:self-end mt-4 md:mt-0 inline-flex items-center gap-2 transition-colors duration-300"
           >
             Ver portfólio completo <ArrowUpRight className="size-3.5" />
           </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-          {primaryTreatments.map((t) => (
-            <article key={t.n} className="group flex flex-col">
-              <div className="overflow-hidden aspect-[4/3] mb-6">
+          {primaryTreatments.map((t, idx) => (
+            <article
+              key={t.n}
+              className="group flex flex-col"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(32px)",
+                transition: `opacity 0.7s ease ${idx * 0.15}s, transform 0.7s ease ${idx * 0.15}s`,
+              }}
+            >
+              <div className="overflow-hidden aspect-[4/3] mb-6 relative">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-full h-full object-cover object-center group-hover:scale-102 transition-all duration-700 img-fade-b"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <div className="flex-1 flex flex-col">
                 <div className="flex items-baseline justify-between mb-4">
                   <span className="font-serif italic text-xl text-brass">{t.n}.</span>
-                  <span className="text-[9px] uppercase tracking-[0.28em] text-ink/50">
+                  <span className="text-[9px] uppercase tracking-[0.28em] text-ink/45">
                     {t.short}
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl mb-4 font-medium tracking-tight text-ink group-hover:text-brass transition-colors">
+                <h3 className="font-serif text-2xl mb-4 font-medium tracking-tight text-ink group-hover:text-brass transition-colors duration-300">
                   {t.name}
                 </h3>
-                <p className="text-sm text-ink/70 leading-relaxed mb-6 font-light flex-1">
+                <p className="text-sm text-ink/65 leading-relaxed mb-6 font-light flex-1">
                   {t.desc}
                 </p>
                 <Link
                   to="/tratamentos"
-                  className="text-[10px] uppercase tracking-[0.22em] font-medium text-brass inline-flex items-center gap-2 hover:gap-3 transition-all"
+                  className="text-[10px] uppercase tracking-[0.22em] font-semibold text-brass inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-300"
                 >
                   Saber mais
                   <ArrowUpRight className="size-3" />
@@ -197,41 +275,62 @@ function HomeTreatments() {
 }
 
 function HomeBio() {
+  const { ref, inView } = useInView();
+
   return (
-    <section className="pt-20 md:pt-28 pb-0 bg-bone border-b border-border overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        <div className="md:col-span-5 self-end flex justify-center items-end">
-          <div className="relative w-full max-w-[480px] md:max-w-none md:w-[125%] md:-ml-[15%] lg:w-[135%] lg:-ml-[25%]">
+    <section className="pt-24 md:pt-32 pb-0 bg-bone border-b border-border overflow-hidden" ref={ref}>
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+        {/* Photo */}
+        <div
+          className="md:col-span-5 self-end flex justify-center items-end"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0)" : "translateX(-40px)",
+            transition: "opacity 0.9s ease 0.1s, transform 0.9s ease 0.1s",
+          }}
+        >
+          <div className="relative w-full max-w-[460px] md:max-w-none">
             <img
               src={portraitBio}
-              alt="Dr. Giuliano Aita"
-              className="w-full h-auto object-contain max-h-[550px] md:max-h-[700px] scale-110 md:scale-125 origin-bottom translate-y-1"
+              alt="Dr. Giuliano Aita — Urologista"
+              className="w-full h-auto object-cover object-top max-h-[600px] md:max-h-[680px]"
+              style={{ objectPosition: "50% 10%" }}
               loading="lazy"
             />
           </div>
         </div>
-        <div className="md:col-span-7 pb-20 md:pb-28">
+
+        {/* Text */}
+        <div
+          className="md:col-span-7 pb-24 md:pb-32"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(32px)",
+            transition: "opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s",
+          }}
+        >
           <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
             Corpo Clínico
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-medium leading-[1.1] mb-6 tracking-tight">
-            Conheça o Dr. <span className="italic font-normal">Giuliano Aita</span>
+            Conheça o Dr.{" "}
+            <span className="italic font-normal">Giuliano Aita</span>
           </h2>
           <blockquote className="font-serif text-lg md:text-xl italic text-ink/80 leading-relaxed mb-6 border-l-2 border-brass pl-5 py-1">
-            “Aliamos inovação tecnológica a um atendimento empático e focado na privacidade integral do paciente.”
+            "Aliamos inovação tecnológica a um atendimento empático, ético e focado na privacidade integral de cada paciente."
           </blockquote>
-          <p className="text-sm md:text-base text-ink/75 leading-relaxed mb-8 font-light max-w-[60ch]">
-            Doutor em Ciências pelo AC Camargo Cancer Center, o Dr. Giuliano Aita é urologista e andrologista de referência no país, com ampla atuação em medicina sexual masculina contemporânea. É membro de sociedades de renome internacional e conferencista regular em congressos urológicos.
+          <p className="text-sm md:text-base text-ink/70 leading-relaxed mb-8 font-light max-w-[58ch]">
+            Doutor em Ciências pelo AC Camargo Cancer Center, o Dr. Giuliano Aita é urologista e andrologista de referência no Brasil, com mais de 20 anos de experiência. Integra o corpo clínico do Hospital Sírio-Libanês e Vila Nova Star em São Paulo. Membro de sociedades médicas internacionais e conferencista em congressos ao redor do mundo.
           </p>
 
-          <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {[
-              "Doutor em Urologia pela USP/AC Camargo",
-              "Membro Titular da SBU (Sociedade Br. de Urologia)",
+              "Doutor em Urologia — AC Camargo Cancer Center",
+              "Membro Titular da SBU (Soc. Brasileira de Urologia)",
               "Membro da International Society for Sexual Medicine",
-              "Diretoria da ABEMSS (Saúde Sexual)",
+              "Coordenação Nacional da ABEMSS (2018–2022)",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-2 text-xs text-ink/80">
+              <div key={item} className="flex items-start gap-2 text-xs text-ink/80 font-light">
                 <CheckCircle2 className="size-4 text-brass shrink-0 mt-0.5" />
                 <span>{item}</span>
               </div>
@@ -240,6 +339,7 @@ function HomeBio() {
 
           <Link
             to="/sobre"
+            id="bio-ver-trajetoria"
             className="inline-flex items-center gap-2 bg-ink text-bone px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase hover:bg-brass transition-colors duration-500"
           >
             Ver trajetória completa
@@ -252,56 +352,106 @@ function HomeBio() {
 }
 
 function HomeClinic() {
+  const { ref, inView } = useInView();
+
+  const clinicImages = [
+    { src: clinicFacade, label: "Uroclin · Teresina", caption: "Fachada da clínica" },
+    { src: clinicEntrance, label: "Giuliano Aita · Urologia", caption: "Entrada exclusiva" },
+    { src: clinicProcedure, label: "Sala de Procedimentos", caption: "Equipamentos de ponta" },
+    { src: clinicConsult, label: "Consultório Privativo", caption: "Ambiente reservado" },
+  ];
+
   return (
-    <section className="py-20 md:py-28 bg-bone-soft/10 border-b border-border">
+    <section className="py-24 md:py-32 bg-bone-soft/10 border-b border-border" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end mb-12">
+        {/* Header */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end mb-14"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s ease, transform 0.7s ease",
+          }}
+        >
           <div className="md:col-span-7">
             <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
               Espaços de Atendimento
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-medium leading-[1.1] tracking-tight">
-              Uma estrutura de <span className="italic font-normal text-brass">excelência</span> em duas capitais.
+              Uma estrutura de{" "}
+              <span className="italic font-normal text-brass">excelência</span>{" "}
+              em duas capitais.
             </h2>
           </div>
-          <div className="md:col-span-5 md:pl-6 md:border-l border-border/80">
-            <p className="text-sm text-ink/70 leading-relaxed font-light">
-              Oferecemos atendimento sofisticado na Euroclin em Teresina e em consultório privativo em São Paulo, garantindo sofisticação, sigilo e conforto.
+          <div className="md:col-span-5 md:pl-8 md:border-l border-border/70">
+            <p className="text-sm text-ink/65 leading-relaxed font-light">
+              Consultório boutique em São Paulo e sede completa em Teresina — ambos projetados para oferecer sigilo, conforto e a mais avançada estrutura diagnóstica.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-          <div className="group relative overflow-hidden aspect-[16/10] bg-ink">
-            <img
-              src={clinic1}
-              alt="Consultório São Paulo"
-              className="w-full h-full object-cover opacity-80 group-hover:scale-102 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent p-6 md:p-8 flex flex-col justify-end">
-              <span className="text-[9px] uppercase tracking-[0.28em] text-brass-soft mb-2 block">Unidade Premium</span>
-              <h3 className="font-serif text-2xl text-bone mb-1 font-medium">São Paulo · SP</h3>
-              <p className="text-xs text-bone/60 font-light">Edifício Vila Olímpia Corporate</p>
+        {/* Photo grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-10">
+          {clinicImages.map((img, idx) => (
+            <div
+              key={img.label}
+              className="group relative overflow-hidden aspect-[3/4] bg-ink"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(28px)",
+                transition: `opacity 0.7s ease ${idx * 0.1}s, transform 0.7s ease ${idx * 0.1}s`,
+              }}
+            >
+              <img
+                src={img.src}
+                alt={img.label}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent flex flex-col justify-end p-4">
+                <span className="text-[8px] uppercase tracking-[0.22em] text-brass-soft mb-1 block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {img.caption}
+                </span>
+                <p className="text-bone text-xs font-serif font-medium leading-tight">{img.label}</p>
+              </div>
             </div>
-          </div>
-          <div className="group relative overflow-hidden aspect-[16/10] bg-ink">
-            <img
-              src={clinic2}
-              alt="Euroclin Teresina"
-              className="w-full h-full object-cover opacity-80 group-hover:scale-102 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent p-6 md:p-8 flex flex-col justify-end">
-              <span className="text-[9px] uppercase tracking-[0.28em] text-brass-soft mb-2 block">Unidade Referência</span>
-              <h3 className="font-serif text-2xl text-bone mb-1 font-medium">Teresina · PI</h3>
-              <p className="text-xs text-bone/60 font-light">Euroclin Teresina</p>
+          ))}
+        </div>
+
+        {/* Unidades cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          {[
+            {
+              city: "São Paulo · SP",
+              tag: "Unidade Premium",
+              detail: "Edifício Vila Olímpia Corporate — entrada discreta, consultório privativo, estacionamento com manobrista.",
+            },
+            {
+              city: "Teresina · PI",
+              tag: "Sede Referência",
+              detail: "Uroclin Teresina — clínica integrada, sala de procedimentos ambulatoriais e fisioterapia pélvica.",
+            },
+          ].map((u, idx) => (
+            <div
+              key={u.city}
+              className="border border-border hover:border-brass/40 p-6 md:p-8 transition-colors duration-300 group"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.7s ease ${0.4 + idx * 0.1}s, transform 0.7s ease ${0.4 + idx * 0.1}s`,
+              }}
+            >
+              <span className="text-[9px] uppercase tracking-[0.28em] text-brass font-medium block mb-2">{u.tag}</span>
+              <h3 className="font-serif text-2xl font-medium text-ink mb-2 group-hover:text-brass transition-colors duration-300">{u.city}</h3>
+              <p className="text-xs text-ink/65 leading-relaxed font-light">{u.detail}</p>
             </div>
-          </div>
+          ))}
         </div>
 
         <div className="text-center">
           <Link
             to="/clinica"
-            className="text-[11px] uppercase tracking-[0.22em] text-ink/80 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 inline-flex items-center gap-2"
+            id="clinic-ver-detalhes"
+            className="text-[11px] uppercase tracking-[0.22em] text-ink/75 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 inline-flex items-center gap-2 transition-colors duration-300"
           >
             Ver fotos e detalhes dos consultórios <ArrowUpRight className="size-3.5" />
           </Link>
@@ -311,69 +461,37 @@ function HomeClinic() {
   );
 }
 
-function HomeNews() {
-  const news = [
-    {
-      cat: "Reabilitação",
-      title: "Tecnologia na fisioterapia pélvica",
-      excerpt: "O papel moderno de tratamentos não invasivos para incontinência e saúde pélvica de alta resolução.",
-      image: clinic3,
-    },
-    {
-      cat: "Próstata",
-      title: "Rezum: tecnologia com vapor d'água para HPB",
-      excerpt: "Entenda como o Rezum trata a hiperplasia de próstata preservando a função sexual.",
-      image: clinic4,
-    },
+function HomeStats() {
+  const { ref, inView } = useInView();
+  const stats = [
+    { value: "20+", label: "Anos de Experiência", desc: "Dedicados à urologia e medicina sexual." },
+    { value: "10k+", label: "Pacientes Atendidos", desc: "Casos clínicos e cirúrgicos com excelência." },
+    { value: "50+", label: "Publicações", desc: "Produção científica nacional e internacional." },
+    { value: "2", label: "Capitais de Atendimento", desc: "São Paulo e Teresina, com o mesmo padrão." },
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-bone border-b border-border">
+    <section className="py-20 md:py-28 bg-ink text-bone border-b border-border/20" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b border-border pb-10 mb-12">
-          <div>
-            <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
-              Artigos & Novidades
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl font-medium leading-none tracking-tight">
-              Canal de <span className="italic font-normal">Informação</span>
-            </h2>
-          </div>
-          <Link
-            to="/publicacoes"
-            className="text-[11px] uppercase tracking-[0.22em] text-ink/75 hover:text-brass border-b border-ink/20 hover:border-brass pb-1 self-start md:self-end mt-4 md:mt-0 inline-flex items-center gap-2"
-          >
-            Ir para o Blog <ArrowUpRight className="size-3.5" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {news.map((n) => (
-            <article key={n.title} className="group flex flex-col sm:flex-row gap-6 items-center">
-              <div className="aspect-[4/3] w-full sm:w-48 shrink-0 overflow-hidden">
-                <img
-                  src={n.image}
-                  alt={n.title}
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
-                  loading="lazy"
-                />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          {stats.map((s, idx) => (
+            <div
+              key={s.label}
+              className="text-center md:text-left"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.7s ease ${idx * 0.12}s, transform 0.7s ease ${idx * 0.12}s`,
+              }}
+            >
+              <div className="font-serif text-4xl md:text-5xl text-brass mb-2 font-medium tracking-tight">
+                {s.value}
               </div>
-              <div className="flex-1">
-                <span className="text-[9px] uppercase tracking-[0.28em] text-brass mb-2 block">{n.cat}</span>
-                <h3 className="font-serif text-xl font-medium leading-snug mb-2 text-ink group-hover:text-brass transition-colors">
-                  {n.title}
-                </h3>
-                <p className="text-xs text-ink/70 leading-relaxed font-light mb-4">
-                  {n.excerpt}
-                </p>
-                <Link
-                  to="/publicacoes"
-                  className="text-[10px] uppercase tracking-[0.22em] font-medium text-ink/80 hover:text-brass inline-flex items-center gap-2"
-                >
-                  Ler artigo <ArrowUpRight className="size-3" />
-                </Link>
+              <div className="text-[10px] uppercase tracking-[0.22em] font-semibold text-bone/90 mb-1">
+                {s.label}
               </div>
-            </article>
+              <p className="text-xs text-bone/45 leading-relaxed font-light">{s.desc}</p>
+            </div>
           ))}
         </div>
       </div>
@@ -382,26 +500,47 @@ function HomeNews() {
 }
 
 function HomeCTA() {
+  const { ref, inView } = useInView();
+
   return (
-    <section className="py-20 md:py-28 bg-ink text-bone text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(95,89,70,0.15)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-screen-md mx-auto px-6 relative z-10">
-        <span className="text-[11px] tracking-[0.28em] uppercase text-brass-soft font-medium mb-4 block">
+    <section className="py-28 md:py-36 bg-bone text-ink text-center relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(180,160,100,0.08)_0%,transparent_65%)] pointer-events-none" />
+      <div
+        className="max-w-screen-md mx-auto px-6 relative z-10"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? "translateY(0)" : "translateY(28px)",
+          transition: "opacity 0.8s ease, transform 0.8s ease",
+        }}
+      >
+        <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-4 block">
           Agendamento Privativo
         </span>
-        <h2 className="font-serif text-3xl sm:text-5xl font-medium leading-tight mb-6 tracking-tight">
-          Segurança, discrição e excelência em saúde masculina.
+        <h2 className="font-serif text-3xl sm:text-5xl font-medium leading-[1.1] mb-6 tracking-tight">
+          Segurança, discrição e{" "}
+          <span className="italic font-normal">excelência</span>{" "}
+          em saúde masculina.
         </h2>
-        <p className="text-bone/60 text-sm md:text-base leading-relaxed mb-10 max-w-[50ch] mx-auto font-light">
-          Agende sua avaliação clínica presencial ou realize uma consulta por telemedicina com total privacidade e acompanhamento individualizado.
+        <p className="text-ink/60 text-sm md:text-base leading-relaxed mb-10 max-w-[48ch] mx-auto font-light">
+          Agende sua avaliação presencial em São Paulo ou Teresina, ou realize uma consulta por telemedicina com total privacidade e acompanhamento individualizado.
         </p>
-        <Link
-          to="/contato"
-          className="group inline-flex items-center gap-3 bg-bone text-ink px-8 py-4 text-xs tracking-[0.22em] uppercase hover:bg-brass-soft hover:text-ink transition-colors duration-500"
-        >
-          Iniciar Pré-Qualificação
-          <ArrowUpRight className="size-4" />
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            to="/contato"
+            id="cta-pre-qualificacao"
+            className="group inline-flex items-center justify-center gap-3 bg-ink text-bone px-8 py-4 text-xs tracking-[0.22em] uppercase hover:bg-brass transition-colors duration-500"
+          >
+            Iniciar Pré-Qualificação
+            <ArrowUpRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+          </Link>
+          <Link
+            to="/clinica"
+            id="cta-ver-clinica"
+            className="inline-flex items-center justify-center gap-2 border border-ink/25 text-ink px-8 py-4 text-xs tracking-[0.22em] uppercase hover:border-brass hover:text-brass transition-colors duration-300"
+          >
+            Conhecer a Clínica
+          </Link>
+        </div>
       </div>
     </section>
   );

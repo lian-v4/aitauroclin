@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, GraduationCap, Award, Landmark, BookOpen } from "lucide-react";
 
-import portraitBio from "@/assets/hero-2-semfundo.png";
+import portraitBio from "@/assets/dr-aita-sobre.jpg";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -74,15 +74,17 @@ function SobrePage() {
           {/* Sidebar Left: Picture and Fast Credentials */}
           <aside className="md:col-span-4 flex flex-col">
             <div className="md:sticky md:top-28">
-              <div className="relative mb-8 flex justify-center items-end bg-gradient-to-b from-bone-soft/40 to-transparent rounded-lg overflow-hidden">
+              <div className="relative mb-8 overflow-hidden rounded-lg bg-bone-soft/20" style={{aspectRatio: "3/4"}}>
                 <img
                   src={portraitBio}
                   alt="Dr. Giuliano Aita"
-                  className="w-full h-auto object-contain max-h-[450px] relative z-10"
+                  className="w-full h-full object-cover object-top"
                   loading="eager"
                 />
-                <span className="absolute bottom-4 left-4 bg-ink/90 text-bone text-[10px] uppercase tracking-[0.22em] px-3 py-1.5 rounded z-20">
-                  Dr. Giuliano Aita · CRM-SP 123.456
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+                <span className="absolute bottom-4 left-4 bg-ink/90 backdrop-blur-sm text-bone text-[10px] uppercase tracking-[0.22em] px-3 py-1.5 rounded flex items-center gap-1.5">
+                  <span className="size-1.5 rounded-full bg-brass inline-block" />
+                  Dr. Giuliano Aita · CRM Verificado
                 </span>
               </div>
 

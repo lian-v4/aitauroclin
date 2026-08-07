@@ -1,13 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Clock, ShieldCheck, ExternalLink } from "lucide-react";
 
-import clinic1 from "@/assets/clinic-1.jpg";
-import clinic2 from "@/assets/clinic-2.jpg";
-import clinic3 from "@/assets/clinic-3.jpg";
-import clinic4 from "@/assets/clinic-4.jpg";
-import clinic5 from "@/assets/clinic-5.jpg";
-import clinic6 from "@/assets/clinic-6.jpg";
-import clinic7 from "@/assets/clinic-7.jpg";
+import clinicFacade from "@/assets/clinic-facade.jpg";
+import clinicEntrance from "@/assets/clinic-entrance.jpg";
+import clinicWaiting from "@/assets/clinic-waiting.jpg";
+import clinicConsult from "@/assets/clinic-consult.jpg";
+import clinicProcedure from "@/assets/clinic-procedure.jpg";
+import clinicReception from "@/assets/clinic-reception.jpg";
 
 export const Route = createFileRoute("/clinica")({
   head: () => ({
@@ -31,19 +30,19 @@ function ClinicaPage() {
       hours: "Segunda a Sexta, das 08h às 19h",
       mapUrl: "https://maps.google.com/?q=Av.+das+Nacoes+Unidas,+12500+Vila+Olimpia+Sao+Paulo",
       amenities: ["Estacionamento com manobrista", "Privacidade acústica absoluta", "Fluxo exclusivo de atendimento", "Próximo à estação de trem CPTM"],
-      images: [clinic1, clinic2, clinic3, clinic4]
+      images: [clinicEntrance, clinicConsult, clinicProcedure]
     },
     {
       id: "pi",
       title: "Teresina · PI",
-      subtitle: "Euroclin Teresina",
-      description: "A Euroclin é a nossa sede de referência no Nordeste, situada em região estratégica de Teresina. Um espaço clínico amplo e moderno que conta com salas equipadas para a realização de exames diagnósticos, fisioterapia pélvica e procedimentos urológicos ambulatoriais com total segurança e o mesmo padrão de atendimento premium de São Paulo.",
+      subtitle: "Uroclin Teresina",
+      description: "A Uroclin é a nossa sede de referência no Nordeste, situada em região estratégica de Teresina. Um espaço clínico amplo e moderno que conta com salas equipadas para a realização de exames diagnósticos, fisioterapia pélvica e procedimentos urológicos ambulatoriais com total segurança e o mesmo padrão de atendimento premium.",
       address: "Av. Dom Severino, 3000 - Fátima, Teresina - PI",
       phone: "+55 (86) 3000-0000",
       hours: "Segunda a Sexta, das 08h às 19h",
       mapUrl: "https://maps.google.com/?q=Av.+Dom+Severino,+3000+Fatima+Teresina",
       amenities: ["Clínica integrada multiespecialidades", "Sala de pequenos procedimentos", "Acessibilidade completa", "Estacionamento privativo"],
-      images: [clinic5, clinic6, clinic7]
+      images: [clinicFacade, clinicReception, clinicWaiting]
     }
   ];
 

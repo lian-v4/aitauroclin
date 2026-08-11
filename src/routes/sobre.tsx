@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, GraduationCap, Award, Landmark, BookOpen } from "lucide-react";
 
-import portraitBio from "@/assets/dr-aita-sobre.jpg";
+import portraitBio from "@/assets/dr-aita-sobre-transparent.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -38,7 +38,7 @@ function SobrePage() {
       icon: Landmark,
       title: "Liderança na Andrologia",
       institution: "Sociedade Brasileira de Urologia",
-      details: "Membro do Departamento de Andrologia (2016-2024), exercendo sua coordenação nacional no biênio 2018-2022."
+      details: "Membro do Departamento de Andrologia (2016-2024), exercendo sua coordenação nacional no biênio 2018-2020."
     },
     {
       icon: BookOpen,
@@ -93,13 +93,15 @@ function SobrePage() {
                 <ul className="space-y-4 text-xs font-light text-ink/80">
                   <li>
                     <strong className="block text-brass font-serif italic text-sm mb-0.5">São Paulo · SP</strong>
-                    Vila Olímpia Corporate <br />
-                    Av. das Nações Unidas, 12.500
+                    Instituto Giuliano Aita <br />
+                    Rua Alvorada, 1289 - Conjuntos 1607-1608 <br />
+                    Vila Olímpia Prime Offices
                   </li>
                   <li>
                     <strong className="block text-brass font-serif italic text-sm mb-0.5">Teresina · PI</strong>
-                    Euroclin Teresina <br />
-                    Av. Dom Severino, 3000
+                    Uroclin <br />
+                    Rua Desembargador Pires de Castro, 186 <br />
+                    Centro Norte
                   </li>
                 </ul>
               </div>

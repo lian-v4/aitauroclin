@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as React from "react";
-import { Phone, MapPin, Instagram, Mail, ArrowUpRight, Send, HelpCircle } from "lucide-react";
+import { Phone, MapPin, Instagram, Mail, ArrowUpRight, Send, HelpCircle, Loader2 } from "lucide-react";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -13,6 +13,7 @@ export const Route = createFileRoute("/contato")({
 });
 
 function ContatoPage() {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [formData, setFormData] = React.useState({
     nome: "",
     idade: "",
@@ -65,8 +66,10 @@ function ContatoPage() {
 
     if (!validateForm()) return;
 
+    setIsSubmitting(true);
+
     // Build the formatted WhatsApp message
-    const cleanLocation = formData.localizacao === "sp" ? "São Paulo (Vila Olímpia)" : "Teresina (Euroclin)";
+    const cleanLocation = formData.localizacao === "sp" ? "São Paulo (Instituto Giuliano Aita)" : "Teresina (Uroclin)";
     const messageText = `Olá! Gostaria de agendar um atendimento com o Dr. Giuliano Aita.\n\n` +
       `Meus dados de Pré-Qualificação:\n` +
       `- Nome Completo: ${formData.nome}\n` +
@@ -77,8 +80,13 @@ function ContatoPage() {
     const encodedMessage = encodeURIComponent(messageText);
     
     // Redirect URL (using a default number, can be adjusted)
-    const whatsappUrl = `https://wa.me/551130000000?text=${encodedMessage}`;
-    window.open(whatsappUrl, "_blank");
+    const whatsappUrl = `https://wa.me/5511916865990?text=${encodedMessage}`;
+    
+    // Simulate processing for better UX
+    setTimeout(() => {
+      window.open(whatsappUrl, "_blank");
+      setIsSubmitting(false);
+    }, 1500);
   };
 
   return (
@@ -159,8 +167,8 @@ function ContatoPage() {
                   className="bg-bone border border-border/80 focus:border-brass rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brass"
                 >
                   <option value="">Selecione a unidade...</option>
-                  <option value="sp">São Paulo - Vila Olímpia</option>
-                  <option value="pi">Teresina - Euroclin</option>
+                  <option value="sp">São Paulo - Instituto Giuliano Aita (Vila Olímpia)</option>
+                  <option value="pi">Teresina - Uroclin</option>
                 </select>
                 {errors.localizacao && <span className="text-xs text-red-600 font-light">{errors.localizacao}</span>}
               </div>
@@ -189,14 +197,29 @@ function ContatoPage() {
                 {errors.servico && <span className="text-xs text-red-600 font-light">{errors.servico}</span>}
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 flex flex-col gap-2">
                 <button
                   type="submit"
-                  className="w-full bg-ink text-bone hover:bg-brass transition-colors py-4 px-6 text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow-md cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full bg-ink text-bone hover:bg-brass transition-colors py-4 px-6 text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow-md cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
                 >
-                  Enviar para o WhatsApp
-                  <Send className="size-3.5" />
+                  {isSubmitting ? (
+                    <>
+                      Preparando Atendimento...
+                      <Loader2 className="size-4 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Enviar para o WhatsApp
+                      <Send className="size-3.5" />
+                    </>
+                  )}
                 </button>
+                {isSubmitting && (
+                  <p className="text-center text-xs text-ink/60 animate-pulse mt-2">
+                    Redirecionando para o ambiente seguro do WhatsApp...
+                  </p>
+                )}
               </div>
 
             </form>
@@ -212,10 +235,10 @@ function ContatoPage() {
                 <h3 className="font-serif text-2xl font-medium mb-8 text-bone">Outras Formas de Contato</h3>
                 
                 <div className="space-y-6">
-                  <a href="tel:+551130000000" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
+                  <a href="tel:+5511916865990" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
                     <span className="flex items-center gap-3 text-sm font-light">
                       <Phone className="size-4 text-brass-soft" />
-                      <span>+55 (11) 3000-0000</span>
+                      <span>+55 (11) 91686-5990</span>
                     </span>
                     <ArrowUpRight className="size-4 text-bone/40" />
                   </a>
@@ -253,9 +276,9 @@ function ContatoPage() {
                     <h4 className="font-serif font-bold text-ink text-base">São Paulo · SP</h4>
                   </div>
                   <p className="text-xs text-ink/75 leading-relaxed font-light pl-6">
-                    Edifício Vila Olímpia Corporate <br />
-                    Av. das Nações Unidas, 12.500 <br />
-                    Vila Olímpia · CEP 04578-000 <br />
+                    Instituto Giuliano Aita <br />
+                    Rua Alvorada, 1289 - conjuntos 1607-1608 <br />
+                    Vila Olímpia Prime Offices · CEP 04550-004 <br />
                     <span className="text-[10px] uppercase tracking-wider text-brass font-medium block mt-1">Estacionamento com manobrista</span>
                   </p>
                 </div>
@@ -267,9 +290,9 @@ function ContatoPage() {
                     <h4 className="font-serif font-bold text-ink text-base">Teresina · PI</h4>
                   </div>
                   <p className="text-xs text-ink/75 leading-relaxed font-light pl-6">
-                    Euroclin Teresina <br />
-                    Av. Dom Severino, 3000 <br />
-                    Fátima · CEP 64049-378 <br />
+                    Uroclin <br />
+                    Rua Desembargador Pires de Castro, 186 <br />
+                    Centro Norte · CEP 64000-390 <br />
                     <span className="text-[10px] uppercase tracking-wider text-brass font-medium block mt-1">Clínica de Especialidades</span>
                   </p>
                 </div>

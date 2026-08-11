@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2, Shield, Award, Microscope } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-import heroPortrait from "@/assets/dr-aita-hero.jpg";
-import portraitBio from "@/assets/dr-aita-bio.jpg";
+import heroPortrait from "@/assets/dr-aita-hero-transparent.png";
+import portraitBio from "@/assets/dr-aita-bio-transparent.png";
 import clinicFacade from "@/assets/clinic-facade.jpg";
 import clinicEntrance from "@/assets/clinic-entrance.jpg";
 import clinicProcedure from "@/assets/clinic-procedure.jpg";
@@ -328,7 +328,7 @@ function HomeBio() {
               "Doutor em Urologia — AC Camargo Cancer Center",
               "Membro Titular da SBU (Soc. Brasileira de Urologia)",
               "Membro da International Society for Sexual Medicine",
-              "Coordenação Nacional da ABEMSS (2018–2022)",
+              "Coordenação Nacional da ABEMSS (Biênio 2018-2020)",
             ].map((item) => (
               <div key={item} className="flex items-start gap-2 text-xs text-ink/80 font-light">
                 <CheckCircle2 className="size-4 text-brass shrink-0 mt-0.5" />
@@ -423,7 +423,7 @@ function HomeClinic() {
             {
               city: "São Paulo · SP",
               tag: "Unidade Premium",
-              detail: "Edifício Vila Olímpia Corporate — entrada discreta, consultório privativo, estacionamento com manobrista.",
+              detail: "Vila Olímpia Prime Offices (Instituto Giuliano Aita) — entrada discreta, consultório privativo, estacionamento com manobrista.",
             },
             {
               city: "Teresina · PI",

@@ -104,7 +104,7 @@ Uma estrutura de excelência em duas capitais.
 
 ### [HOME_CLINICA_DESCRICAO]
 **Texto Atual:**
-Oferecemos atendimento sofisticado na Euroclin em Teresina e em consultório privativo em São Paulo, garantindo sofisticação, sigilo e conforto.
+Oferecemos atendimento sofisticado na Uroclin em Teresina e no Instituto Giuliano Aita em São Paulo, garantindo sofisticação, sigilo e conforto.
 
 **[NOVO TEXTO]:**
 
@@ -145,14 +145,14 @@ Ambientes cirúrgicos e ambulatoriais projetados para proporcionar conforto abso
 
 ### [CLINICA_SP_DESCRICAO]
 **Texto Atual:**
-Localizado no Edifício Vila Olímpia Corporate, nosso consultório em São Paulo foi inteiramente projetado sob o conceito de atendimento boutique. Oferecemos infraestrutura de ponta, consultório privativo para discussões diagnósticas e facilidades como estacionamento com manobrista (valet), além de fluxos de entrada e saída pensados para assegurar a máxima privacidade aos pacientes.
+Localizado no Vila Olímpia Prime Offices (Instituto Giuliano Aita), nosso consultório em São Paulo foi inteiramente projetado sob o conceito de atendimento boutique. Oferecemos infraestrutura de ponta, consultório privativo para discussões diagnósticas e facilidades como estacionamento com manobrista (valet), além de fluxos de entrada e saída pensados para assegurar a máxima privacidade aos pacientes.
 
 **[NOVO TEXTO]:**
 
 
 ### [CLINICA_PI_DESCRICAO]
 **Texto Atual:**
-A Euroclin é a nossa sede de referência no Nordeste, situada em região estratégica de Teresina. Um espaço clínico amplo e moderno que conta com salas equipadas para a realização de exames diagnósticos, fisioterapia pélvica e procedimentos urológicos ambulatoriais com total segurança e o mesmo padrão de atendimento premium de São Paulo.
+A Uroclin é a nossa sede de referência no Nordeste, situada em região estratégica de Teresina. Um espaço clínico amplo e moderno que conta com salas equipadas para a realização de exames diagnósticos, fisioterapia pélvica e procedimentos urológicos ambulatoriais com total segurança e o mesmo padrão de atendimento premium de São Paulo.
 
 **[NOVO TEXTO]:**
 
@@ -202,7 +202,7 @@ Foi o primeiro colocado no concurso para médico urologista do Hospital Universi
 Seus consultórios em São Paulo e Teresina foram projetados especificamente para oferecer uma experiência clínica única: um porto seguro onde privacidade absoluta, hospitalidade premium e rigor técnico são os pilares de cada atendimento.
 
 **[NOVO TEXTO]:**
-Ao longo de sua carreira, liderou a introdução de importantes avanços tecnológicos na urologia do Piauí, como a cirurgia videolaparoscópica, as cirurgias renais percutâneas e endoscópicas e as terapias minimamente invasivas para o tratamento da hiperplasia benigna da próstata. Foi ele quem realizou a primeira nefrectomia radical por videolaparoscopia realizada no estado, foi o pioneiro na utilização do laser em ureteroscopia flexível para os cálculos urinários, além de ter introduzido a vaporização de próstata e a terapia com vapor de água (Rezum) na hiperplasia prostática benigna. Também foi pioneiro na incorporação das ondas de choque de baixa intensidade para o tratamento da disfunção erétil no Brasil e da tecnologia Emsella para reabilitação do assoalho pélvico. Seu compromisso com a inovação também é voltado à formação de novos especialistas. Organizou o primeiro Stone Free Day do Piauí, voltado ao treinamento em Endourologia, atua como palestrante em congressos nacionais e internacionais, instrutor em cursos de atualização e revisor científico de periódicos especializados em urologia. Entre 2016 e 2024, integrou o Departamento de Andrologia da Sociedade Brasileira de Urologia, exercendo sua coordenação no biênio 2018-2022. Nesse período, participou ativamente da elaboração de diretrizes, da educação continuada e da promoção do desenvolvimento científico da andrologia no Brasil. Atualmente, integra a equipe de Urologia do Hospital Sírio-Libanês e Vila Nova Star, em São Paulo, conciliando a prática clínica de alta complexidade com pesquisa, ensino e constante atualização científica. Mais do que acompanhar a evolução da urologia, o Dr. Giuliano Aita tem contribuído para construí-la. Sua atuação é pautada pela medicina baseada em evidências, pela incorporação responsável de novas tecnologias e por um atendimento individualizado, oferecendo aos pacientes o que há de mais moderno e seguro em saúde urológica e sexual masculina.
+Ao longo de sua carreira, liderou a introdução de importantes avanços tecnológicos na urologia do Piauí, como a cirurgia videolaparoscópica, as cirurgias renais percutâneas e endoscópicas e as terapias minimamente invasivas para o tratamento da hiperplasia benigna da próstata. Foi ele quem realizou a primeira nefrectomia radical por videolaparoscopia realizada no estado, foi o pioneiro na utilização do laser em ureteroscopia flexível para os cálculos urinários, além de ter introduzido a vaporização de próstata e a terapia com vapor de água (Rezum) na hiperplasia prostática benigna. Também foi pioneiro na incorporação das ondas de choque de baixa intensidade para o tratamento da disfunção erétil no Brasil e da tecnologia Emsella para reabilitação do assoalho pélvico. Seu compromisso com a inovação também é voltado à formação de novos especialistas. Organizou o primeiro Stone Free Day do Piauí, voltado ao treinamento em Endourologia, atua como palestrante em congressos nacionais e internacionais, instrutor em cursos de atualização e revisor científico de periódicos especializados em urologia. Entre 2016 e 2024, integrou o Departamento de Andrologia da Sociedade Brasileira de Urologia, exercendo sua coordenação no biênio 2018-2020. Nesse período, participou ativamente da elaboração de diretrizes, da educação continuada e da promoção do desenvolvimento científico da andrologia no Brasil. Atualmente, integra a equipe de Urologia do Hospital Sírio-Libanês e Vila Nova Star, em São Paulo, conciliando a prática clínica de alta complexidade com pesquisa, ensino e constante atualização científica. Mais do que acompanhar a evolução da urologia, o Dr. Giuliano Aita tem contribuído para construí-la. Sua atuação é pautada pela medicina baseada em evidências, pela incorporação responsável de novas tecnologias e por um atendimento individualizado, oferecendo aos pacientes o que há de mais moderno e seguro em saúde urológica e sexual masculina.
 
 
 ---

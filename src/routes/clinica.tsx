@@ -12,7 +12,7 @@ export const Route = createFileRoute("/clinica")({
   head: () => ({
     meta: [
       { title: "A Clínica & Multilocalidade — Dr. Giuliano Aita" },
-      { name: "description", content: "Conheça as sedes de atendimento do Dr. Giuliano Aita: Euroclin (Teresina) e Consultório de São Paulo (Vila Olímpia). Espaços planejados para o seu bem-estar." },
+      { name: "description", content: "Conheça as sedes de atendimento do Dr. Giuliano Aita: Uroclin (Teresina) e Instituto Giuliano Aita (São Paulo - Vila Olímpia). Espaços planejados para o seu bem-estar." },
     ],
   }),
   component: ClinicaPage,
@@ -23,24 +23,24 @@ function ClinicaPage() {
     {
       id: "sp",
       title: "São Paulo · SP",
-      subtitle: "Unidade Premium Vila Olímpia",
-      description: "Localizado no Edifício Vila Olímpia Corporate, nosso consultório em São Paulo foi inteiramente projetado sob o conceito de atendimento boutique. Oferecemos infraestrutura de ponta, consultório privativo para discussões diagnósticas e facilidades como estacionamento com manobrista (valet), além de fluxos de entrada e saída pensados para assegurar a máxima privacidade aos pacientes.",
-      address: "Av. das Nações Unidas, 12.500 - Vila Olímpia, São Paulo - SP",
-      phone: "+55 (11) 3000-0000",
+      subtitle: "Instituto Giuliano Aita",
+      description: "Localizado no Vila Olímpia Prime Offices, nosso consultório em São Paulo foi inteiramente projetado sob o conceito de atendimento boutique. Oferecemos infraestrutura de ponta, consultório privativo para discussões diagnósticas e facilidades como estacionamento com manobrista (valet), além de fluxos de entrada e saída pensados para assegurar a máxima privacidade aos pacientes.",
+      address: "Rua Alvorada, 1289 - conjuntos 1607-1608 - Vila Olímpia Prime Offices, São Paulo - SP, CEP 04550-004",
+      phone: "+55 (11) 91686-5990",
       hours: "Segunda a Sexta, das 08h às 19h",
-      mapUrl: "https://maps.google.com/?q=Av.+das+Nacoes+Unidas,+12500+Vila+Olimpia+Sao+Paulo",
+      mapUrl: "https://maps.google.com/?q=Rua+Alvorada,+1289+Vila+Olimpia+Prime+Offices+Sao+Paulo+SP+04550-004",
       amenities: ["Estacionamento com manobrista", "Privacidade acústica absoluta", "Fluxo exclusivo de atendimento", "Próximo à estação de trem CPTM"],
       images: [clinicEntrance, clinicConsult, clinicProcedure]
     },
     {
       id: "pi",
       title: "Teresina · PI",
-      subtitle: "Uroclin Teresina",
+      subtitle: "Uroclin",
       description: "A Uroclin é a nossa sede de referência no Nordeste, situada em região estratégica de Teresina. Um espaço clínico amplo e moderno que conta com salas equipadas para a realização de exames diagnósticos, fisioterapia pélvica e procedimentos urológicos ambulatoriais com total segurança e o mesmo padrão de atendimento premium.",
-      address: "Av. Dom Severino, 3000 - Fátima, Teresina - PI",
-      phone: "+55 (86) 3000-0000",
+      address: "Rua Desembargador Pires de Castro, 186 - Centro Norte, Teresina - PI, CEP 64000-390",
+      phone: "+55 (11) 91686-5990",
       hours: "Segunda a Sexta, das 08h às 19h",
-      mapUrl: "https://maps.google.com/?q=Av.+Dom+Severino,+3000+Fatima+Teresina",
+      mapUrl: "https://maps.google.com/?q=Rua+Desembargador+Pires+de+Castro,+186+Centro+Norte+Teresina+PI+64000-390",
       amenities: ["Clínica integrada multiespecialidades", "Sala de pequenos procedimentos", "Acessibilidade completa", "Estacionamento privativo"],
       images: [clinicFacade, clinicReception, clinicWaiting]
     }

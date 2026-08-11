@@ -122,7 +122,7 @@ function TratamentosPage() {
     const message = encodeURIComponent(
       `Olá, gostaria de saber mais informações técnicas e agendar uma consulta sobre o procedimento: ${treatmentName}.`
     );
-    window.open(`https://wa.me/551130000000?text=${message}`, "_blank");
+    window.open(`https://wa.me/5511916865990?text=${message}`, "_blank");
   };
 
   return (

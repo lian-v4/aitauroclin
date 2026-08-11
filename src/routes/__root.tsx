@@ -95,6 +95,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "canonical",
+        href: "https://drgiulianoaita.com.br",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -104,10 +108,39 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Dr. Giuliano Aita - Urologia & Saúde do Homem",
+    "image": "https://drgiulianoaita.com.br/og-image.jpg",
+    "url": "https://drgiulianoaita.com.br",
+    "telephone": "+5511916865990",
+    "medicalSpecialty": ["Urologic", "Andrologic"],
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Alvorada, 1289 - conjuntos 1607-1608, Vila Olímpia Prime Offices",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "04550-004",
+        "addressCountry": "BR"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Desembargador Pires de Castro, 186 - Centro Norte",
+        "addressLocality": "Teresina",
+        "addressRegion": "PI",
+        "postalCode": "64000-390",
+        "addressCountry": "BR"
+      }
+    ]
+  };
+
   return (
     <html lang="pt-BR">
       <head>
         <HeadContent />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
         {children}
@@ -120,6 +153,17 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <QueryClientProvider client={queryClient}>

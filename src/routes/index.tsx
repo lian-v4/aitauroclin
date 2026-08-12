@@ -91,7 +91,7 @@ function Hero() {
           <h1 className="font-serif text-[2.6rem] sm:text-5xl md:text-[4.8rem] leading-[1.04] tracking-[-0.025em] font-medium mb-8 max-w-[18ch]">
             Excelência urológica com{" "}
             <span className="italic font-normal text-brass/90">discrição</span>{" "}
-            e precisão absoluta.
+            e precisão.
           </h1>
           <p className="text-base md:text-lg text-ink/70 leading-relaxed max-w-[48ch] text-pretty mb-10 font-light">
             Centro de referência em saúde masculina sob coordenação do Dr. Giuliano Aita — especialista com atuação nos maiores hospitais do Brasil e reconhecimento científico internacional.

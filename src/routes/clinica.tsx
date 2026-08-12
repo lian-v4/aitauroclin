@@ -2,11 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Clock, ShieldCheck, ExternalLink } from "lucide-react";
 
 import clinicFacade from "@/assets/clinic-facade.jpg";
-import clinicEntrance from "@/assets/clinic-entrance.jpg";
 import clinicWaiting from "@/assets/clinic-waiting.jpg";
-import clinicConsult from "@/assets/clinic-consult.jpg";
-import clinicProcedure from "@/assets/clinic-procedure.jpg";
 import clinicReception from "@/assets/clinic-reception.jpg";
+
+import spImage1 from "@/assets/Giuliano-9.jpg.jpeg";
+import spImage2 from "@/assets/Giuliano-41.jpg.jpeg";
+import spImage3 from "@/assets/Giuliano-52.jpg.jpeg";
 
 export const Route = createFileRoute("/clinica")({
   head: () => ({
@@ -30,7 +31,7 @@ function ClinicaPage() {
       hours: "Segunda a Sexta, das 08h às 19h",
       mapUrl: "https://maps.google.com/?q=Rua+Alvorada,+1289+Vila+Olimpia+Prime+Offices+Sao+Paulo+SP+04550-004",
       amenities: ["Estacionamento com manobrista", "Privacidade acústica absoluta", "Fluxo exclusivo de atendimento", "Próximo à estação de trem CPTM"],
-      images: [clinicEntrance, clinicConsult, clinicProcedure]
+      images: [spImage1, spImage2, spImage3]
     },
     {
       id: "pi",

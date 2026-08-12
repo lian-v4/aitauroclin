@@ -47,8 +47,8 @@ const treatmentsData: Treatment[] = [
     n: "01",
     name: "UroFill®",
     short: "Preenchimento / Estética Íntima",
-    desc: "Técnica patenteada mundialmente para engrossamento peniano estético e funcional com ácido hialurônico, realizada em consultório.",
-    technicalDesc: "O UroFill® é um procedimento patenteado desenvolvido nos Estados Unidos, amplamente testado e aprovado, focado no engrossamento peniano estético e funcional. Utiliza um ácido hialurônico de alta densidade e grau médico especificamente desenvolvido para esta aplicação. O tratamento é realizado inteiramente no consultório médico, sob anestesia local tópica e sem necessidade de cirurgia, internação ou afastamento das atividades cotidianas. O ganho de diâmetro é gradual e distribuído de forma homogênea por meio de aplicações sequenciais, resultando em um aspecto extremamente natural, proporcional e estável.",
+    desc: "Técnica patenteada para engrossamento peniano estético e funcional com ácido hialurônico, realizada em consultório.",
+    technicalDesc: "UroFill® é o novo método inovador que oferece aumento do diâmetro do pênis com a utilização de um preenchedor dérmico próprio não-cirúrgico. O resultado é funcional, cosmeticamente atraente e duradouro. Essa técnica patenteada é ao mesmo tempo segura e eficiente. Os fornecedores do UroFill® são urologistas aprovados a treinamentos abrangentes que levam a resultados seguros, previsíveis e de grande êxito. Somente os fornecedores do UroFill® têm a permissão de fazer esse procedimento de aumento do diâmetro peniano no próprio consultório.",
     image: treatmentUrofill,
     isFlagship: true,
   },
@@ -57,7 +57,7 @@ const treatmentsData: Treatment[] = [
     name: "Rezum",
     short: "Terapia de Próstata a Vapor",
     desc: "Procedimento térmico inovador e minimamente invasivo com vapor d'água para hiperplasia prostática benigna (HPB).",
-    technicalDesc: "O Rezum é um sistema revolucionário de terapia térmica com vapor d'água para o tratamento da Hiperplasia Prostática Benigna (HPB). O procedimento utiliza a energia térmica contida em uma pequena quantidade de vapor d'água injetada diretamente no tecido prostático obstrutivo sob sedação leve. Em poucas semanas, o corpo absorve naturalmente o tecido tratado, reduzindo o volume da próstata e desobstruindo a uretra. A grande vantagem do Rezum é a realização ambulatorial (sem internação), recuperação extremamente rápida e, fundamentalmente, a preservação da função sexual e ejaculatória, diferentemente das cirurgias tradicionais.",
+    technicalDesc: "O Rezum é um tratamento inovador e minimamente invasivo, utilizado para reduzir os sintomas da hiperplasia prostática benigna (HPB), uma condição que afeta a próstata, resultando em seu aumento e causando problemas urinários. A técnica utiliza vapor de água para destruir o tecido prostático em excesso. O procedimento dura cerca de 30 minutos e é realizado em consultório, sob anestesia local. Benefícios: Minimamente invasivo, não requer internação; Preserva a função sexual; Recuperação rápida; Resultados duradouros.",
     image: treatmentRezum,
     isFlagship: true,
   },
@@ -66,7 +66,7 @@ const treatmentsData: Treatment[] = [
     name: "Ondas de Choque",
     short: "Reabilitação Vascular Peniana",
     desc: "Terapia com ondas acústicas de baixa intensidade de consultório para estimulação vascular da ereção.",
-    technicalDesc: "A Terapia por Ondas de Choque Extracorpóreas de Baixa Intensidade (Li-ESWT) é o tratamento de vanguarda para a disfunção erétil de origem vascular. O procedimento consiste na aplicação de ondas acústicas de baixa intensidade diretamente no tecido peniano, estimulando o processo de angiogênese (formação de novos vasos sanguíneos) e reabilitando o tecido erétil. Trata-se de um protocolo indolor, realizado em consultório em poucas sessões, sem necessidade de anestesia ou medicação prévia. Atua diretamente na causa física da disfunção, devolvendo a espontaneidade e a rigidez às ereções.",
+    technicalDesc: "O tratamento com a aplicação de ondas de choque de baixa intensidade tem o potencial de melhorar a espontaneidade das ereções, assim como o suprimento sanguíneo do tecido erétil do pênis. Ele não envolve a utilização de nenhum produto farmacêutico, não provoca efeitos colaterais e nem afeta outros órgãos. Vantagens: não é invasivo, é totalmente indolor e não requer nenhum tipo de preparação, sedação ou anestesia. Tem um alto índice de sucesso, com mais de 70% dos pacientes satisfeitos, e é 100% seguro.",
     image: treatmentShockwave,
     isFlagship: true,
   },
@@ -75,7 +75,7 @@ const treatmentsData: Treatment[] = [
     name: "Injeção Peniana",
     short: "Terapia Farmacológica Autônoma",
     desc: "Combinação personalizada de medicamentos vasoativos para aplicação imediata e controlada.",
-    technicalDesc: "A terapia com injeções intracavernosas vasoativas consiste na autoaplicação de doses personalizadas de substâncias vasodilatadoras diretamente no corpo cavernoso do pênis, minutos antes da relação sexual. É uma solução sob medida de altíssima eficácia para casos em que os comprimidos orais não trouxeram o resultado desejado ou são contraindicados. O protocolo é customizado pelo Dr. Giuliano Aita, combinando diferentes agentes vasoativos para otimizar os resultados e mitigar efeitos colaterais. O paciente recebe treinamento detalhado em consultório para garantir a máxima autonomia, conforto e segurança.",
+    technicalDesc: "A farmacoterapia intracavernosa popularizou-se como alternativa eficiente e segura no tratamento da disfunção erétil. Está associada a um alto índice de sucesso, sendo efetiva em proporcionar ereções rígidas em cerca de 89% dos homens. Nós utilizamos preferencialmente a combinação de dois ou três medicamentos (bimix e trimix), o que aumenta o índice de sucesso por meio de um sinergismo de ação pró-ereção, ao mesmo tempo que se consegue reduzir os efeitos colaterais. O paciente recebe treinamento detalhado em consultório.",
     isFlagship: false,
   },
   {
@@ -83,7 +83,7 @@ const treatmentsData: Treatment[] = [
     name: "Implante Peniano",
     short: "Prótese Peniana Maleável e Inflável",
     desc: "Tratamento cirúrgico de alta satisfação para disfunção erétil refratária.",
-    technicalDesc: "O implante de prótese peniana é um procedimento cirúrgico altamente eficaz, indicado principalmente para disfunção erétil severa que não respondeu a tratamentos clínicos, ou para pacientes que buscam uma solução definitiva e espontânea. As próteses podem ser maleáveis (semi-rígidas) ou infláveis (de 2 ou 3 volumes), sendo estas últimas as que proporcionam o resultado estético e funcional mais discreto, natural e semelhante ao estado fisiológico. A cirurgia é realizada em ambiente hospitalar, com altíssimo índice de satisfação tanto do paciente quanto de sua parceria.",
+    technicalDesc: "A cirurgia de implante peniano é o tratamento de escolha para os homens com disfunção erétil refratária ao tratamento conservador com medicamentos ou que desejam uma solução definitiva para o problema. Há dois tipos principais de implantes penianos: o maleável (semirrígido) e o inflável. As próteses infláveis estão associadas a um melhor aspecto cosmético final no seu estado de flacidez e de ereção. Os implantes maleáveis mantêm o pênis em um único estado e representam uma alternativa de excelente custo-benefício. A cirurgia é feita em ambiente hospitalar com índices de satisfação superiores a 90%.",
     isFlagship: false,
   },
   {
@@ -91,7 +91,7 @@ const treatmentsData: Treatment[] = [
     name: "Reposição de Testosterona",
     short: "Modulação Hormonal Masculina (TRT)",
     desc: "Protocolo individualizado e seguro para deficiência androgênica do envelhecimento (andropausa).",
-    technicalDesc: "A terapia de reposição de testosterona (TRT) é indicada para homens diagnosticados com Deficiência Androgênica do Envelhecimento Masculino (DAEM), popularmente conhecida como andropausa. Sob supervisão cuidadosa, o protocolo inicia com uma avaliação diagnóstica minuciosa de hormônios e exames metabólicos e cardiovasculares. A reposição pode ser feita por via transdérmica (géis aplicados na pele) ou injetável de curta ou longa duração. O monitoramento clínico regular garante a segurança prostática, cardiovascular e a melhora significativa da disposição, libido, cognição e composição corporal.",
+    technicalDesc: "Níveis reduzidos de testosterona representam um fator de risco cardiovascular, além de afetar a libido, energia e qualidade de vida. A maioria dos estudos científicos associa a terapia de reposição com testosterona a um risco menor ou neutro de eventos cardiovasculares. O tratamento é indicado mediante rigorosa triagem diagnóstica e acompanhamento continuado, devolvendo vitalidade e disposição ao paciente de forma segura.",
     isFlagship: false,
   },
   {
@@ -107,7 +107,7 @@ const treatmentsData: Treatment[] = [
     name: "Fisioterapia Pélvica & Emsella",
     short: "Tratamento de Incontinência Masculina",
     desc: "Estimulação eletromagnética de alta intensidade para reabilitação do assoalho pélvico.",
-    technicalDesc: "A reabilitação pélvica moderna combina fisioterapia especializada a tecnologias de vanguarda, como a cadeira Emsella, que utiliza energia eletromagnética focada de alta intensidade (HIFEM) para estimular milhares de contrações supramáximas nos músculos do assoalho pélvico. É uma abordagem totalmente não invasiva, realizada com o paciente vestido, ideal para o tratamento e prevenção da incontinência urinária masculina (comum após cirurgias de próstata), além de atuar como coadjuvante no tratamento de dores pélvicas crônicas e disfunções sexuais.",
+    technicalDesc: "A incontinência urinária, além de ser desconfortável, pode impactar a autoestima, a vida social e até os relacionamentos íntimos. A cadeira Emsella utiliza energia eletromagnética focada de alta intensidade (HIFEM) para estimular milhares de contrações supramáximas nos músculos do assoalho pélvico. É uma abordagem totalmente não invasiva, realizada com o paciente vestido, ideal para o tratamento e prevenção da incontinência urinária masculina, além de atuar como coadjuvante no tratamento de dores pélvicas crônicas e disfunções sexuais.",
     isFlagship: false,
   },
 ];
@@ -122,7 +122,7 @@ function TratamentosPage() {
     const message = encodeURIComponent(
       `Olá, gostaria de saber mais informações técnicas e agendar uma consulta sobre o procedimento: ${treatmentName}.`
     );
-    window.open(`https://wa.me/5511916865990?text=${message}`, "_blank");
+    window.open(`https://wa.me/5511971663688?text=${message}`, "_blank");
   };
 
   return (

@@ -85,16 +85,15 @@ function Hero() {
           <div className="flex items-center gap-3 mb-7">
             <span className="h-px w-10 bg-brass" />
             <span className="font-serif italic text-brass text-sm md:text-base tracking-wide">
-              Urologia Avançada & Andrologia
+              Saúde do Homem
             </span>
           </div>
           <h1 className="font-serif text-[2.6rem] sm:text-5xl md:text-[4.8rem] leading-[1.04] tracking-[-0.025em] font-medium mb-8 max-w-[18ch]">
-            Excelência urológica com{" "}
-            <span className="italic font-normal text-brass/90">discrição</span>{" "}
-            e precisão.
+            Atendimento Médico Urológico de{" "}
+            <span className="italic font-normal text-brass/90">Alta Qualidade</span>
           </h1>
           <p className="text-base md:text-lg text-ink/70 leading-relaxed max-w-[48ch] text-pretty mb-10 font-light">
-            Centro de referência em saúde masculina sob coordenação do Dr. Giuliano Aita — especialista com atuação nos maiores hospitais do Brasil e reconhecimento científico internacional.
+            Centro de excelência inspirado nos mais avançados centros de tratamento de saúde internacionais.
           </p>
           <div className="flex flex-wrap items-center gap-5">
             <Link
@@ -175,7 +174,7 @@ function HomeTreatments() {
       n: "01",
       name: "UroFill®",
       short: "Estética Íntima Masculina",
-      desc: "Única técnica patenteada internacionalmente para engrossamento peniano, realizada com segurança e total privacidade em ambiente clínico de alto padrão.",
+      desc: "Primeira e única técnica patenteada para engrossamento peniano no mundo. Segura, efetiva, comprovada e não cirúrgica.",
       image: treatmentUrofill,
       icon: Microscope,
     },
@@ -183,7 +182,7 @@ function HomeTreatments() {
       n: "02",
       name: "Rezum",
       short: "Hiperplasia Prostática Benigna",
-      desc: "Tratamento minimamente invasivo com vapor d'água para HPB. Tecnologia de vanguarda que preserva integralmente a função erétil e ejaculatória.",
+      desc: "Tratamento inovador e minimamente invasivo, utilizado para reduzir os sintomas da hiperplasia prostática benigna (HPB).",
       image: treatmentRezum,
       icon: Shield,
     },
@@ -191,7 +190,7 @@ function HomeTreatments() {
       n: "03",
       name: "Ondas de Choque",
       short: "Terapia Vascular Peniana",
-      desc: "Procedimento ambulatorial não-invasivo para estimulação vascular e restauração da potência erétil espontânea. Sem cirurgia, sem internação.",
+      desc: "Tratamento que melhora a espontaneidade das ereções e o suprimento sanguíneo, resultando em melhora da qualidade e duração da ereção.",
       image: treatmentShockwave,
       icon: Award,
     },
@@ -310,25 +309,24 @@ function HomeBio() {
           }}
         >
           <span className="text-[11px] tracking-[0.28em] uppercase text-brass font-medium mb-3 block">
-            Corpo Clínico
+            Giuliano Aita
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-medium leading-[1.1] mb-6 tracking-tight">
-            Conheça o Dr.{" "}
-            <span className="italic font-normal">Giuliano Aita</span>
+            Doutor em Ciências pelo{" "}
+            <span className="italic font-normal">AC Camargo Cancer Center-SP</span>
           </h2>
           <blockquote className="font-serif text-lg md:text-xl italic text-ink/80 leading-relaxed mb-6 border-l-2 border-brass pl-5 py-1">
-            "Aliamos inovação tecnológica a um atendimento empático, ético e focado na privacidade integral de cada paciente."
+            "Participo ativamente como conferencista nos principais eventos urológicos nacionais e internacionais, além de ocupar posições de destaque em agremiações médicas."
           </blockquote>
           <p className="text-sm md:text-base text-ink/70 leading-relaxed mb-8 font-light max-w-[58ch]">
-            Doutor em Ciências pelo AC Camargo Cancer Center, o Dr. Giuliano Aita é urologista e andrologista de referência no Brasil, com mais de 20 anos de experiência. Integra o corpo clínico do Hospital Sírio-Libanês e Vila Nova Star em São Paulo. Membro de sociedades médicas internacionais e conferencista em congressos ao redor do mundo.
+            Doutor em Ciências pelo AC Camargo Cancer Center-SP, o Dr. Giuliano Aita é urologista e andrologista de referência. Membro de sociedades médicas relacionadas à Andrologia, como a Associação Brasileira de Estudos em Medicina e Saúde Sexual (ABEMSS) e International Society for Sexual Medicine.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {[
-              "Doutor em Urologia — AC Camargo Cancer Center",
-              "Membro Titular da SBU (Soc. Brasileira de Urologia)",
-              "Membro da International Society for Sexual Medicine",
-              "Coordenação Nacional da ABEMSS (Biênio 2018-2020)",
+              "Doutor em Ciências pelo AC Camargo Cancer Center-SP",
+              "Associação Brasileira de Estudos em Medicina e Saúde Sexual",
+              "International Society for Sexual Medicine",
             ].map((item) => (
               <div key={item} className="flex items-start gap-2 text-xs text-ink/80 font-light">
                 <CheckCircle2 className="size-4 text-brass shrink-0 mt-0.5" />
@@ -423,12 +421,12 @@ function HomeClinic() {
             {
               city: "São Paulo · SP",
               tag: "Unidade Premium",
-              detail: "Vila Olímpia Prime Offices (Instituto Giuliano Aita) — entrada discreta, consultório privativo, estacionamento com manobrista.",
+              detail: "Rua Alvorada, 1289 - Conj. 1608 - Vila Olimpia. São Paulo - SP - CEP: 04550-004. Contato: (11) 97166-3688.",
             },
             {
               city: "Teresina · PI",
               tag: "Sede Referência",
-              detail: "Uroclin Teresina — clínica integrada, sala de procedimentos ambulatoriais e fisioterapia pélvica.",
+              detail: "R. Des. Pires de Castro, 186 - Centro - Norte. Teresina - PI - CEP: 64000-390. Contato: (86) 99415-3688.",
             },
           ].map((u, idx) => (
             <div

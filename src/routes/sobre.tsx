@@ -38,7 +38,7 @@ function SobrePage() {
       icon: Landmark,
       title: "Liderança na Andrologia",
       institution: "Sociedade Brasileira de Urologia",
-      details: "Membro do Departamento de Andrologia (2016-2024), exercendo sua coordenação nacional no biênio 2018-2020."
+      details: "Coordenação Nacional do Departamento de Andrologia da Sociedade Brasileira de Urologia no biênio 2018-2020."
     },
     {
       icon: BookOpen,
@@ -117,19 +117,19 @@ function SobrePage() {
 
               <div className="space-y-6 text-base text-ink/75 leading-relaxed font-light text-pretty">
                 <p>
-                  O <strong>Dr. Giuliano Aita</strong> é médico urologista, mestre e doutor, com mais de 20 anos de experiência dedicados à Urologia, uro-oncologia e saúde sexual masculina. Sua trajetória é marcada pela combinação entre sólida formação acadêmica, inovação tecnológica, produção científica e liderança na evolução da Urologia brasileira.
+                  Eu sou natural de Goiânia-GO, onde residi até os 6 anos de idade. Mudei-me para o Rio de Janeiro e em 1990 vim com minha família para o Piauí, terra natal de meus familiares maternos. Conclui o ensino médio no Instituto Dom Barreto e graduei-me em Medicina na Universidade Federal do Piauí, em 1999, quando tive a honra de ser o orador da turma. Em 2005, conclui as residências médicas de Cirurgia Geral e Urologia no Instituto de Assistência Médica do Servidor Público Estadual de São Paulo-SP (IAMSPE-SP).
                 </p>
                 <p>
-                  Concluiu o Mestrado e o Doutorado em Urologia desenvolvendo pesquisas voltadas à inovação na especialidade. Seus estudos científicos de destaque foram apresentados em dois dos mais importantes congressos mundiais da especialidade: o Congresso da Sociedade Internacional de Urologia (SIU), em Glasgow, Escócia (2014), e o Congresso da American Urological Association (AUA), em San Diego, Estados Unidos (2016). Em 2019, realizou estágio de aperfeiçoamento em uro-oncologia no prestigiado <strong>Moffitt Cancer Center</strong>, um dos mais renomados centros oncológicos dos Estados Unidos.
+                  Foi neste mesmo ano que retornei ao Piauí para exercer a Urologia, após ter recebido o título de especialista, emitido pela Associação Médica Brasileira. Já em 2005, realizamos as primeiras cirurgias uro-oncológicas por videolaparoscopia e muito contribui para a difusão das técnicas minimamente invasivas no tratamento dos cálculos urinários no estado do Piauí. Em 2007, inspirado no modelo de atendimento e estrutura de alto padrão existente em São Paulo e em centros de excelência no exterior, inaugurei a Clínica Uroclin.
                 </p>
                 <p>
-                  Sua atuação assistencial e de ensino também se consolidou no serviço público, sendo o primeiro colocado no concurso para médico urologista do Hospital Universitário da Universidade Federal do Piauí (HU-UFPI). No HU-UFPI, exerceu papel fundamental para a incorporação de técnicas cirúrgicas avançadas renais percutâneas, endoscópicas e videolaparoscópicas, atuando também na formação de novos residentes. Durante vários anos, integrou a equipe de transplante renal no Piauí, contribuindo decisivamente para o desenvolvimento do programa de transplantes do estado.
+                  O trabalho e dedicação intensos na Urologia me proporcionaram ocupar a coordenação do Serviço de Urologia do Hospital São Marcos, onde permaneci até 2014, ano em que passei a atuar no Hospital Universitário da Universidade Federal do Piauí (HU-UFPI), mediante concurso público em que fui o primeiro colocado. Neste hospital, atuei até o ano de 2018. Em 2012, Teresina sediou o Congresso Norte Nordeste de Urologia, evento presidido por mim e que contou com a presença de chefes dos maiores serviços de Urologia do país e do exterior.
                 </p>
                 <p>
-                  Atualmente, integra as conceituadas equipes de Urologia do <strong>Hospital Sírio-Libanês</strong> e <strong>Vila Nova Star</strong>, em São Paulo, conciliando a prática clínica de alta complexidade com a pesquisa, o ensino e a constante atualização científica.
+                  Em 2014, fui agraciado com o título de cidadão piauiense pela Assembleia Legislativa do Estado do Piauí. Neste mesmo ano, recebi o título de Mestre em Ciências, pelo AC Camargo Cancer Center-SP, com um estudo sobre neoplasia de pênis que foi apresentado no Congresso da Societe Internationale d'Urologie (Glasgow, 2014) e na American Urological Association (San Diego, 2016). Em 2016, recebi a maior comenda da Associação Médica Brasileira seccional Piauí, a medalha do Mérito São Lucas.
                 </p>
                 <p>
-                  Sua filosofia clínica é pautada na medicina baseada em evidências, na incorporação responsável de novas tecnologias e em um atendimento individualizado e humanizado, oferecendo aos pacientes o que há de mais moderno e seguro em saúde urológica e sexual masculina.
+                  Desde 2015, tenho concentrado a minha atuação urológica na área de Andrologia e Medicina Sexual masculina. Integrei o grupo de especialistas do Departamento de Andrologia da Sociedade Brasileira de Urologia (2016-2018) e assumi a coordenação deste mesmo Departamento nos dois anos seguintes. Em 2019, cumpri período como observership no Moffitt Cancer Center, na Flórida (EUA). Participo ativamente como conferencista nos principais eventos urológicos, além de ocupar posições de destaque em agremiações como a ABEMSS e a ISSM. Em 2022, recebi o título de Doutor em Ciências pelo AC Camargo Cancer Center-SP.
                 </p>
               </div>
             </div>

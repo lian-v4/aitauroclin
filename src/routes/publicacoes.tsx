@@ -7,6 +7,15 @@ import clinic4 from "@/assets/clinic-4.jpg";
 import clinic5 from "@/assets/clinic-5.jpg";
 import clinic6 from "@/assets/clinic-6.jpg";
 
+import blogImg1 from "@/assets/blog/1780f63bcbf42a376b35abb755c2d712.jpg";
+import blogImg2 from "@/assets/blog/5250aaaeea1ef1f7391b8b002906c656.jpg";
+import blogImg3 from "@/assets/blog/7880bcc6d02cc936dc1857f6dd8071e5.jpeg";
+import blogImg4 from "@/assets/blog/8b433b88528b9e99d812cf62b159d49a.png";
+import blogImg5 from "@/assets/blog/bbccec8e7758deaa62824d42afc36097.jpg";
+import blogImg6 from "@/assets/blog/0a9f84746f844148a92b808344d9b5ec.png";
+import blogImg7 from "@/assets/blog/5858d5d6bbb69d9ea9800676820cf61f.jpg";
+import blogImg8 from "@/assets/blog/7da9ab3b062c162c8bba05adea55612c.jpg";
+
 export const Route = createFileRoute("/publicacoes")({
   head: () => ({
     meta: [
@@ -31,48 +40,92 @@ interface Article {
 
 const articlesData: Article[] = [
   {
-    slug: "urofill-revolucao-estetica-intima",
-    title: "A Revolução do UroFill® na Estética Íntima Masculina Moderna",
-    excerpt: "Única técnica patenteada internacionalmente para engrossamento peniano estético e funcional com ácido hialurônico e anestesia local.",
-    category: "Estética Íntima",
-    date: "15 Jun 2026",
-    readTime: "6 min de leitura",
-    image: clinic5,
+    slug: "tecnologia-na-fisioterapia-pelvica",
+    title: "Tecnologia na fisioterapia pélvica",
+    excerpt: "A incontinência urinária, além de ser desconfortável, pode impactar a autoestima, a vida social e até os relacionamentos íntimos. Felizmente, hoje existe uma forma moderna, prática e indolor de tratar essa condição: a cadeira EmSella.",
+    category: "Geral",
+    date: "31 Mar 2025",
+    readTime: "3 min de leitura",
+    image: blogImg1,
     author: "Dr. Giuliano Aita",
-    content: "O engrossamento peniano estético e funcional com ácido hialurônico de grau médico tornou-se o procedimento de escolha para homens exigentes que buscam simetria, volume e autoconfiança sem os riscos associados às cirurgias invasivas. O UroFill® destaca-se por ser uma técnica patenteada que distribui o material de forma homogênea por meio de aplicações sequenciais em consultório, oferecendo resultados de altíssima fidelidade estética e estabilidade temporal prolongada."
+    content: "A incontinência urinária, além de ser desconfortável, pode impactar a autoestima, a vida social e até os relacionamentos íntimos. Felizmente, hoje existe uma forma moderna, prática e indolor de tratar essa condição: a cadeira EmSella."
   },
   {
-    slug: "rezum-vapor-agua-hpb",
-    title: "Rezum: Tecnologia Térmica a Vapor no Tratamento da HPB",
-    excerpt: "Como o uso direcionado de vapor d'água reconfigura a próstata obstrutiva preservando integralmente a ejaculação e a ereção.",
+    slug: "rezum-tratamento-minimamente-invasivo-para-hiperplasia-prostatica",
+    title: "Rezum: Tratamento minimamente invasivo para hiperplasia prostática",
+    excerpt: "A Hiperplasia Prostática Benigna (HPB), também conhecida como aumento benigno da próstata, é uma condição que impacta a vida de milhões de homens acima dos 50 anos.",
     category: "Próstata",
-    date: "28 Mai 2026",
-    readTime: "8 min de leitura",
-    image: clinic4,
+    date: "28 Mar 2025",
+    readTime: "4 min de leitura",
+    image: blogImg2,
     author: "Dr. Giuliano Aita",
-    content: "O sistema térmico Rezum utiliza a energia natural contida no vapor de água injetada diretamente no lobo prostático hipertrofiado. Esse procedimento ambulatorial de minutos induz a apoptose celular localizada; ao longo das semanas, o organismo reabsorve o tecido tratado, desobstruindo a uretra. O grande diferencial reside na preservação funcional, garantindo que o paciente recupere a qualidade urinária sem comprometer sua vida sexual ativa."
+    content: "A Hiperplasia Prostática Benigna (HPB), também conhecida como aumento benigno da próstata, é uma condição que impacta a vida de milhões de homens acima dos 50 anos. Entre os principais sintomas, estão a dificuldade para urinar, jato fraco e aumento da frequência urinária."
   },
   {
-    slug: "ondas-de-choque-disfuncao-eretil",
-    title: "Ondas de Choque de Baixa Intensidade e Reabilitação Vascular",
-    excerpt: "O estímulo à angiogênese atuando diretamente na causa vascular da disfunção erétil, sem a necessidade de fármacos diários.",
-    category: "Andrologia",
-    date: "12 Mai 2026",
+    slug: "urofill-a-revolucao-segura-da-estetica-intima-masculina",
+    title: "UroFill: A revolução segura da estética íntima masculina",
+    excerpt: "A UroFill® é uma técnica não cirúrgica voltada ao engrossamento peniano, patenteada nos Estados Unidos desde 2017 e já utilizada com sucesso em mais de 10.000 pacientes.",
+    category: "Estética Íntima",
+    date: "24 Abr 2025",
     readTime: "5 min de leitura",
-    image: clinic3,
+    image: blogImg3,
     author: "Dr. Giuliano Aita",
-    content: "A terapia acústica por ondas de choque extracorpóreas de baixa intensidade (Li-ESWT) baseia-se na microestimulação mecânica dos corpos cavernosos. Esse estímulo induz a liberação de fatores de crescimento celular e a formação de novos vasos sanguíneos (angiogênese). Ao restabelecer a irrigação sanguínea peniana, o tratamento reabilita a resposta natural do órgão, reduzindo ou eliminando a dependência de medicação oral vasodilatadora."
+    content: "A UroFill® é uma técnica não cirúrgica voltada ao engrossamento peniano, patenteada nos Estados Unidos desde 2017 e já utilizada com sucesso em mais de 10.000 pacientes. Seu diferencial está no uso de ácido hialurônico, uma substância que já existe em nosso corpo, proporcionando resultados seguros e naturais."
   },
   {
-    slug: "reposicao-testosterona-seguranca",
-    title: "Terapia de Reposição de Testosterona (TRT): Mitos e Protocolos",
-    excerpt: "Os parâmetros diagnósticos de segurança prostática e cardiovascular no tratamento da deficiência androgênica (andropausa).",
-    category: "Saúde Hormonal",
-    date: "04 Abr 2026",
-    readTime: "7 min de leitura",
-    image: clinic6,
+    slug: "essa-e-a-doenca-que-mais-causa-disfuncao-eretil",
+    title: "Essa é a doença que mais causa disfunção erétil",
+    excerpt: "A disfunção erétil (DE) é um problema que afeta milhões de homens em todo o mundo e pode ser um dos primeiros sinais de problemas de saúde mais graves, como o diabetes.",
+    category: "Andrologia",
+    date: "20 Mar 2025",
+    readTime: "4 min de leitura",
+    image: blogImg4,
     author: "Dr. Giuliano Aita",
-    content: "A modulação hormonal na andropausa (DAEM) devolve vitalidade, cognição, libido e composição muscular ao homem. Contudo, a TRT exige rigorosa triagem inicial e acompanhamento continuado. O monitoramento de antígenos prostáticos (PSA), hematócrito e exames lipídicos afasta riscos cardiovasculares e oncológicos, transformando a reposição hormonal em uma terapia segura de alta performance de bem-estar."
+    content: "A disfunção erétil (DE) é um problema que afeta milhões de homens em todo o mundo e pode ser um dos primeiros sinais de problemas de saúde mais graves, como o diabetes. A relação entre essas duas condições é complexa, e o controle adequado é fundamental para a saúde sexual."
+  },
+  {
+    slug: "descubra-quantas-vezes-uma-pessoa-saudavel-urina-ao-dia",
+    title: "Descubra quantas vezes uma pessoa saudável urina ao dia",
+    excerpt: "A frequência urinária é um indicador importante da saúde geral. Urinar muitas ou poucas vezes ao dia pode estar relacionado a diversos fatores, desde o consumo de líquidos até condições de saúde subjacentes.",
+    category: "Geral",
+    date: "20 Mar 2025",
+    readTime: "3 min de leitura",
+    image: blogImg5,
+    author: "Dr. Giuliano Aita",
+    content: "A frequência urinária é um indicador importante da saúde geral. Urinar muitas ou poucas vezes ao dia pode estar relacionado a diversos fatores, desde o consumo de líquidos até condições de saúde subjacentes. Mas afinal, quantas vezes é considerado normal ir ao banheiro diariamente?"
+  },
+  {
+    slug: "conheca-a-cadeira-que-e-a-arma-contra-a-incontinencia-urinaria",
+    title: "Conheça a cadeira que é a arma contra a incontinência urinária",
+    excerpt: "A incontinência urinária afeta milhões de pessoas em todo o mundo, impactando diretamente a qualidade de vida e o bem-estar emocional.",
+    category: "Geral",
+    date: "17 Mar 2025",
+    readTime: "4 min de leitura",
+    image: blogImg6,
+    author: "Dr. Giuliano Aita",
+    content: "A incontinência urinária afeta milhões de pessoas em todo o mundo, impactando diretamente a qualidade de vida e o bem-estar emocional. O problema pode ocorrer por diversos fatores, como o envelhecimento, o parto, a menopausa ou mesmo cirurgias que afetam a região pélvica."
+  },
+  {
+    slug: "quer-fazer-vasectomia-antes-veja-isso",
+    title: "Quer fazer vasectomia? Antes, veja isso!",
+    excerpt: "A vasectomia é um dos métodos contraceptivos mais eficazes e procurados pelos homens que desejam uma solução definitiva para o controle da natalidade.",
+    category: "Andrologia",
+    date: "13 Mar 2025",
+    readTime: "5 min de leitura",
+    image: blogImg7,
+    author: "Dr. Giuliano Aita",
+    content: "A vasectomia é um dos métodos contraceptivos mais eficazes e procurados pelos homens que desejam uma solução definitiva para o controle da natalidade. Recentemente, a legislação brasileira passou por atualizações importantes que alteraram os critérios e prazos para a realização."
+  },
+  {
+    slug: "usa-vape-sua-testosterona-pode-cair-ate-50",
+    title: "Usa vape? Sua testosterona pode cair até 50%",
+    excerpt: "O uso de cigarros eletrônicos tem aumentado nos últimos anos, principalmente entre jovens e adultos que buscam uma alternativa ao tabaco tradicional.",
+    category: "Saúde Hormonal",
+    date: "27 Ago 2025",
+    readTime: "4 min de leitura",
+    image: blogImg8,
+    author: "Dr. Giuliano Aita",
+    content: "O uso de cigarros eletrônicos tem aumentado nos últimos anos, principalmente entre jovens e adultos que buscam uma alternativa ao tabaco tradicional. No entanto, a crença de que os vapes são menos prejudiciais à saúde pode ser enganosa. Mesmo sem os componentes químicos do cigarro comum, o vape tem impacto significativo nos níveis hormonais."
   }
 ];
 

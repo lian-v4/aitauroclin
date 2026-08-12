@@ -114,12 +114,12 @@ function RootShell({ children }: { children: ReactNode }) {
     "name": "Dr. Giuliano Aita - Urologia & Saúde do Homem",
     "image": "https://drgiulianoaita.com.br/og-image.jpg",
     "url": "https://drgiulianoaita.com.br",
-    "telephone": "+5511916865990",
+    "telephone": "+5511971663688",
     "medicalSpecialty": ["Urologic", "Andrologic"],
     "address": [
       {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Alvorada, 1289 - conjuntos 1607-1608, Vila Olímpia Prime Offices",
+        "streetAddress": "Rua Alvorada, 1289 - Conj. 1608 - Vila Olimpia",
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
         "postalCode": "04550-004",
@@ -127,7 +127,7 @@ function RootShell({ children }: { children: ReactNode }) {
       },
       {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Desembargador Pires de Castro, 186 - Centro Norte",
+        "streetAddress": "R. Des. Pires de Castro, 186 - Centro - Norte",
         "addressLocality": "Teresina",
         "addressRegion": "PI",
         "postalCode": "64000-390",

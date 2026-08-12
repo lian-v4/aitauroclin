@@ -80,7 +80,7 @@ function ContatoPage() {
     const encodedMessage = encodeURIComponent(messageText);
     
     // Redirect URL (using a default number, can be adjusted)
-    const whatsappUrl = `https://wa.me/5511916865990?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5511971663688?text=${encodedMessage}`;
     
     // Simulate processing for better UX
     setTimeout(() => {
@@ -235,17 +235,24 @@ function ContatoPage() {
                 <h3 className="font-serif text-2xl font-medium mb-8 text-bone">Outras Formas de Contato</h3>
                 
                 <div className="space-y-6">
-                  <a href="tel:+5511916865990" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
+                  <a href="tel:+5511971663688" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
                     <span className="flex items-center gap-3 text-sm font-light">
                       <Phone className="size-4 text-brass-soft" />
-                      <span>+55 (11) 91686-5990</span>
+                      <span>SP: +55 (11) 97166-3688</span>
                     </span>
                     <ArrowUpRight className="size-4 text-bone/40" />
                   </a>
-                  <a href="mailto:contato@giulianoaita.com.br" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
+                  <a href="tel:+5586994153688" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
+                    <span className="flex items-center gap-3 text-sm font-light">
+                      <Phone className="size-4 text-brass-soft" />
+                      <span>PI: +55 (86) 99415-3688</span>
+                    </span>
+                    <ArrowUpRight className="size-4 text-bone/40" />
+                  </a>
+                  <a href="mailto:giuliano@giulianoaita.com.br" className="flex items-center justify-between border-b border-bone/10 pb-4 hover:border-brass-soft transition-colors">
                     <span className="flex items-center gap-3 text-sm font-light">
                       <Mail className="size-4 text-brass-soft" />
-                      <span>contato@giulianoaita.com.br</span>
+                      <span>giuliano@giulianoaita.com.br</span>
                     </span>
                     <ArrowUpRight className="size-4 text-bone/40" />
                   </a>
@@ -277,8 +284,8 @@ function ContatoPage() {
                   </div>
                   <p className="text-xs text-ink/75 leading-relaxed font-light pl-6">
                     Instituto Giuliano Aita <br />
-                    Rua Alvorada, 1289 - conjuntos 1607-1608 <br />
-                    Vila Olímpia Prime Offices · CEP 04550-004 <br />
+                    Rua Alvorada, 1289 - Conj. 1608 <br />
+                    Vila Olimpia · CEP 04550-004 <br />
                     <span className="text-[10px] uppercase tracking-wider text-brass font-medium block mt-1">Estacionamento com manobrista</span>
                   </p>
                 </div>
@@ -291,8 +298,8 @@ function ContatoPage() {
                   </div>
                   <p className="text-xs text-ink/75 leading-relaxed font-light pl-6">
                     Uroclin <br />
-                    Rua Desembargador Pires de Castro, 186 <br />
-                    Centro Norte · CEP 64000-390 <br />
+                    R. Des. Pires de Castro, 186 <br />
+                    Centro - Norte · CEP 64000-390 <br />
                     <span className="text-[10px] uppercase tracking-wider text-brass font-medium block mt-1">Clínica de Especialidades</span>
                   </p>
                 </div>

@@ -89,11 +89,11 @@ function Hero() {
             </span>
           </div>
           <h1 className="font-serif text-[2.6rem] sm:text-5xl md:text-[4.8rem] leading-[1.04] tracking-[-0.025em] font-medium mb-8 max-w-[18ch]">
-            Atendimento Médico Urológico de{" "}
-            <span className="italic font-normal text-brass/90">Alta Qualidade</span>
+            Sinta-se bem para viver o melhor que a{" "}
+            <span className="italic font-normal text-brass/90">vida tem a oferecer</span>
           </h1>
           <p className="text-base md:text-lg text-ink/70 leading-relaxed max-w-[48ch] text-pretty mb-10 font-light">
-            Centro de excelência inspirado nos mais avançados centros de tratamento de saúde internacionais.
+            A Clínica focada no atendimento urológico, com o objetivo de proporcionar conforto e excelência para seus pacientes.
           </p>
           <div className="flex flex-wrap items-center gap-5">
             <Link
@@ -376,14 +376,13 @@ function HomeClinic() {
               Espaços de Atendimento
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-medium leading-[1.1] tracking-tight">
-              Uma estrutura de{" "}
-              <span className="italic font-normal text-brass">excelência</span>{" "}
-              em duas capitais.
+              Unidades de{" "}
+              <span className="italic font-normal text-brass">Atendimento</span>
             </h2>
           </div>
           <div className="md:col-span-5 md:pl-8 md:border-l border-border/70">
             <p className="text-sm text-ink/65 leading-relaxed font-light">
-              Consultório boutique em São Paulo e sede completa em Teresina — ambos projetados para oferecer sigilo, conforto e a mais avançada estrutura diagnóstica.
+              Focada no atendimento urológico, priorizando o conforto e a discrição para todos os nossos pacientes.
             </p>
           </div>
         </div>

@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Clock, ShieldCheck, ExternalLink } from "lucide-react";
 
 import clinicFacade from "@/assets/clinic-facade.jpg";
-import clinicWaiting from "@/assets/clinic-waiting.jpg";
-import clinicReception from "@/assets/clinic-reception.jpg";
+import clinicProcedure from "@/assets/clinic-procedure.jpg";
+import clinicTeresina from "@/assets/clinica teresina.jpg";
 
 import spImage1 from "@/assets/Giuliano-9.jpg.jpeg";
 import spImage2 from "@/assets/Giuliano-41.jpg.jpeg";
@@ -25,7 +25,7 @@ function ClinicaPage() {
       id: "sp",
       title: "São Paulo · SP",
       subtitle: "Instituto Giuliano Aita",
-      description: "Localizado no Vila Olímpia Prime Offices, nosso consultório em São Paulo foi inteiramente projetado sob o conceito de atendimento boutique. Oferecemos infraestrutura de ponta, consultório privativo para discussões diagnósticas e facilidades como estacionamento com manobrista (valet), além de fluxos de entrada e saída pensados para assegurar a máxima privacidade aos pacientes.",
+      description: "Unidade de atendimento especializada em Urologia e Andrologia na cidade de São Paulo, priorizando a excelência, o conforto e a discrição.",
       address: "Rua Alvorada, 1289 - Conj. 1608 - Vila Olimpia, São Paulo - SP, CEP 04550-004",
       phone: "+55 (11) 97166-3688",
       hours: "Segunda a Sexta, das 08h às 19h",
@@ -37,13 +37,13 @@ function ClinicaPage() {
       id: "pi",
       title: "Teresina · PI",
       subtitle: "Uroclin",
-      description: "A Uroclin é a nossa sede de referência no Nordeste, situada em região estratégica de Teresina. Um espaço clínico amplo e moderno que conta com salas equipadas para a realização de exames diagnósticos, fisioterapia pélvica e procedimentos urológicos ambulatoriais com total segurança e o mesmo padrão de atendimento premium.",
+      description: "Sede de atendimento localizada em região estratégica de Teresina, oferecendo exames, tratamentos e procedimentos urológicos com segurança e qualidade.",
       address: "R. Des. Pires de Castro, 186 - Centro - Norte, Teresina - PI, CEP 64000-390",
       phone: "+55 (86) 99415-3688",
       hours: "Segunda a Sexta, das 08h às 19h",
       mapUrl: "https://maps.google.com/?q=Rua+Desembargador+Pires+de+Castro,+186+Centro+Norte+Teresina+PI+64000-390",
       amenities: ["Clínica integrada multiespecialidades", "Sala de pequenos procedimentos", "Acessibilidade completa", "Estacionamento privativo"],
-      images: [clinicFacade, clinicReception, clinicWaiting]
+      images: [clinicTeresina, clinicFacade, clinicProcedure]
     }
   ];
 
@@ -63,7 +63,7 @@ function ClinicaPage() {
             Estrutura & <span className="italic font-normal">Multilocalidade</span>
           </h1>
           <p className="text-base md:text-lg text-ink/75 leading-relaxed font-light">
-            Ambientes cirúrgicos e ambulatoriais projetados para proporcionar conforto absoluto, sigilo incondicional e as melhores tecnologias diagnósticas em duas capitais do país.
+            Estrutura planejada para proporcionar excelência, foco e discrição em seus tratamentos urológicos em duas capitais do país.
           </p>
         </header>
 

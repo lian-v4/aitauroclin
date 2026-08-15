@@ -101,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "canonical",
-        href: "https://drgiulianoaita.com.br",
+        href: "https://www.giulianoaita.com.br",
       },
     ],
   }),
@@ -116,8 +116,8 @@ function RootShell({ children }: { children: ReactNode }) {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Dr. Giuliano Aita - Urologia & Saúde do Homem",
-    "image": "https://drgiulianoaita.com.br/og-image.jpg",
-    "url": "https://drgiulianoaita.com.br",
+    "image": "https://www.giulianoaita.com.br/og-image.jpg",
+    "url": "https://www.giulianoaita.com.br",
     "telephone": "+5511971663688",
     "medicalSpecialty": ["Urologic", "Andrologic"],
     "address": [
